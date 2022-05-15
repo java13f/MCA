@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div th:fragment="AdminMainForm" class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+    <div data-options="region:'north',collapsible:false,split:true,title:'Группы пользователей',border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:218px;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+        <div data-options="region:'center',collapsible:false,split:false,border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><table  id="dgGroups_Module_Admin" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'post',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%"><thead >
+        <tr><th data-options="title:'ID',field:'id',width:100,sortable:true,resizable:true,fixed:true"></th>
+            <th data-options="title:'Код',field:'code',width:150,sortable:true,resizable:true,fixed:true"></th>
+            <th data-options="title:'Наименование',field:'name',width:10000,sortable:true,resizable:true"></th>
+            <th data-options="title:'Удалена',field:'del',width:100,sortable:true,resizable:true,fixed:true"></th>
+        </tr></thead>
+        </table>
+
+        </div>
+        <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:36px;"><div style="height:100%;padding:2px;">
+            <a  id="btnAddGroup_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Добавить',iconCls:'icon-add',iconAlign:'left',size:'small'"></a>
+
+            <a  id="btnChangeGroup_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Изменить',iconCls:'icon-edit',iconAlign:'left',size:'small'"></a>
+
+            <a  id="btnDeleteGroup_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Удалить',iconCls:'icon-remove',iconAlign:'left',size:'small'"></a>
+
+            <a  id="btnUpdateGroups_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Обновить',iconCls:'icon-reload',iconAlign:'left',size:'small'"></a>
+
+            <span style="font-family:Microsoft Sans Serif;font-size:10pt;font-weight: bold;">Фильтр</span>
+
+            <input  id="txGroupFilter_Module_Admin"  class="easyui-textbox" data-options="multiline:false,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+        </div>
+
+        </div>
+    </div>
+
+    </div>
+    <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div id="tbBindings_Module_Admin"  class="easyui-tabs" data-options="fit:true,plain:true,border:true,scrollIncrement:100,scrollDuration:400,tabPosition:'top',headerWith:150,tabHeight:27,selected:0,showHeader:true,justified:false,narrow:false,pill:false"><div  id="tpUsers_Module_Admin" data-options="content:'',cache:true,collapsible:false,closable:false,selected:false,disabled:false" title="Пользователи и группы"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+        <div data-options="region:'center',collapsible:false,split:false,border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+            <div data-options="region:'center',collapsible:false,split:false,title:'Пользователи в группах',border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><table  id="dgUserGroups_Module_Admin" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'post',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%"><thead >
+            <tr><th data-options="title:'ID',field:'id',width:100,sortable:true,resizable:true,fixed:true"></th>
+                <th data-options="title:'Имя пользователя',field:'userName',width:10000,sortable:true,resizable:true"></th>
+                <th data-options="title:'Удалён',field:'del',width:100,sortable:true,resizable:true,fixed:true"></th>
+            </tr></thead>
+            </table>
+
+            </div>
+            <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:36px;"><div style="height:100%;padding:2px;">
+                <a  id="btnAddUserGroups_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Добавить',iconCls:'icon-add',iconAlign:'left',size:'small'"></a>
+
+                <a  id="btnChangeUserGroups_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Изменить',iconCls:'icon-edit',iconAlign:'left',size:'small'"></a>
+
+                <a  id="btnDeleteUserGroups_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Удалить',iconCls:'icon-remove',iconAlign:'left',size:'small'"></a>
+
+                <a  id="btnUpdateUserGroups_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Обновить',iconCls:'icon-reload',iconAlign:'left',size:'small'"></a>
+
+            </div>
+
+            </div>
+        </div>
+
+        </div>
+        <div data-options="region:'south',collapsible:false,split:true,border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:218px;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+            <div data-options="region:'center',collapsible:false,split:false,title:'Пользователи',border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><table  id="dgUsers_Module_Admin" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'post',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%"><thead >
+            <tr><th data-options="title:'ID',field:'id',width:100,sortable:true,resizable:true,fixed:true"></th>
+                <th data-options="title:'Логин пользователя',field:'login',width:150,sortable:true,resizable:true,fixed:true"></th>
+                <th data-options="title:'Имя пользователя',field:'userName',width:10000,sortable:true,resizable:true"></th>
+                <th data-options="title:'Включен',field:'isenabled',width:80,sortable:true,resizable:true,fixed:true"></th>
+                <th data-options="title:'Удалён',field:'del',width:80,sortable:true,resizable:true,fixed:true"></th>
+            </tr></thead>
+            </table>
+
+            </div>
+            <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:36px;"><div style="height:100%;padding:2px;">
+                <a  id="btnAddUser_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Добавить',iconCls:'icon-add',iconAlign:'left',size:'small'"></a>
+
+                <a  id="btnChangeUser_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Изменить',iconCls:'icon-edit',iconAlign:'left',size:'small'"></a>
+
+                <a  id="btnDeleteUser_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Удалить',iconCls:'icon-remove',iconAlign:'left',size:'small'"></a>
+
+                <a  id="btnUpdateUser_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Обновить',iconCls:'icon-reload',iconAlign:'left',size:'small'"></a>
+
+                <a  id="btnShowFilterUsers_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Фильтр',iconCls:'icon-filter',iconAlign:'left',size:'small'"></a>
+
+                <input id="cbFixGroupsByUser_Module_Admin" data-options="with:20,height:20,checked:false,disabled:false,label:'Фиксировать группы',labelWidth:150,labelPosition:'after',labelAlign:'left'" class="easyui-checkbox"/>
+
+            </div>
+
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    </div>
+        <div  id="tpApps_Module_Admin" data-options="content:'',cache:true,collapsible:false,closable:false,selected:false,disabled:false" title="Приложения"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+            <div data-options="region:'center',collapsible:false,split:false,border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+                <div data-options="region:'center',collapsible:false,split:false,title:'Приложения в группах',border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><table  id="dgAppRights_Module_Admin" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'post',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%"><thead >
+                <tr><th data-options="title:'ID',field:'id',width:100,sortable:true,resizable:true,fixed:true"></th>
+                    <th data-options="title:'Код приложения',field:'code',width:150,sortable:true,resizable:true,fixed:true"></th>
+                    <th data-options="title:'Наименование',field:'name',width:10000,sortable:true,resizable:true"></th>
+                    <th data-options="title:'Удалено',field:'del',width:100,sortable:true,resizable:true,fixed:true"></th>
+                </tr></thead>
+                </table>
+
+                </div>
+                <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:36px;"><div style="height:100%;padding:2px;">
+                    <a  id="btnAddAppRights_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Добавить',iconCls:'icon-add',iconAlign:'left',size:'small'"></a>
+
+                    <a  id="btnChangeAppRights_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Изменить',iconCls:'icon-edit',iconAlign:'left',size:'small'"></a>
+
+                    <a  id="btnDelAppRights_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Удалить',iconCls:'icon-remove',iconAlign:'left',size:'small'"></a>
+
+                    <a  id="btnUpdateAppRights_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Обновить',iconCls:'icon-reload',iconAlign:'left',size:'small'"></a>
+
+                </div>
+
+                </div>
+            </div>
+
+            </div>
+            <div data-options="region:'south',collapsible:false,split:true,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:218px;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+                <div data-options="region:'center',collapsible:false,split:false,title:'Приложения',border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><table  id="dgApps_Module_Admin" class="easyui-treegrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'post',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24,treeField:'name',animate:false,cascadeCheck:true,onlyLeafCheck:false,lines:true" width="100%" height="100%"><thead >
+                <tr><th data-options="title:'Наименование',field:'name',width:10000"></th>
+                    <th data-options="title:'ID',field:'id',width:150,fixed:true"></th>
+                    <th data-options="title:'Код приложения',field:'code',width:150,fixed:true"></th>
+                    <th data-options="title:'Тип приложения',field:'type',width:150,fixed:true"></th>
+                    <th data-options="title:'Удалено',field:'del',width:80,fixed:true"></th>
+                </tr></thead>
+                </table>
+
+                </div>
+                <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:36px;"><div style="height:100%;padding:2px;">
+                    <a  id="btnAddApp_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Добавить',iconCls:'icon-add',iconAlign:'left',size:'small'"></a>
+
+                    <a  id="btnChangeApp_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Изменить',iconCls:'icon-edit',iconAlign:'left',size:'small'"></a>
+
+                    <a  id="btnDelApp_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Удалить',iconCls:'icon-remove',iconAlign:'left',size:'small'"></a>
+
+                    <a  id="btnUpdateApps_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Обновить',iconCls:'icon-reload',iconAlign:'left',size:'small'"></a>
+
+                    <input id="cbFixGroupsByApp_Module_Admin" data-options="with:20,height:20,checked:false,disabled:false,label:'Фиксировать группы',labelWidth:150,labelPosition:'after',labelAlign:'left'" class="easyui-checkbox"/>
+
+                </div>
+
+                </div>
+            </div>
+
+            </div>
+        </div>
+
+        </div>
+        <div  id="tpActs_Module_Admin" data-options="content:'',cache:true,collapsible:false,closable:false,selected:false,disabled:false" title="Действия"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+            <div data-options="region:'center',collapsible:false,split:false,border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+                <div data-options="region:'center',collapsible:false,split:false,title:'Действия в группах',border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><table  id="dgActGroups_Module_Admin" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'post',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%"><thead >
+                <tr><th data-options="title:'ID',field:'id',width:100,sortable:true,resizable:true,fixed:true"></th>
+                    <th data-options="title:'Код приложения',field:'appCode',width:145,sortable:true,resizable:true,fixed:true"></th>
+                    <th data-options="title:'Имя приложения',field:'appName',width:10000,sortable:true,resizable:true"></th>
+                    <th data-options="title:'Код действия',field:'actCode',width:145,sortable:true,resizable:true,fixed:true"></th>
+                    <th data-options="title:'Наименование действия',field:'actName',width:10000,sortable:true,resizable:true"></th>
+                    <th data-options="title:'Удалено',field:'del',width:100,sortable:true,resizable:true,fixed:true"></th>
+                </tr></thead>
+                </table>
+
+                </div>
+                <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:36px;"><div style="height:100%;padding:2px;">
+                    <a  id="btnAddActGroup_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Добавить',iconCls:'icon-add',iconAlign:'left',size:'small'"></a>
+
+                    <a  id="btnChangeActGroup_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Изменить',iconCls:'icon-edit',iconAlign:'left',size:'small'"></a>
+
+                    <a  id="btnDeleteActGroups_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Удалить',iconCls:'icon-remove',iconAlign:'left',size:'small'"></a>
+
+                    <a  id="btnUpdateActGroups_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Обновить',iconCls:'icon-reload',iconAlign:'left',size:'small'"></a>
+
+                </div>
+
+                </div>
+            </div>
+
+            </div>
+            <div data-options="region:'south',collapsible:false,split:true,title:'Действия',border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:218px;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+                <div data-options="region:'center',collapsible:false,split:false,border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><table  id="dgActs_Module_Admin" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'post',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%"><thead >
+                <tr><th data-options="title:'ID',field:'id',width:100,sortable:true,resizable:true,fixed:true"></th>
+                    <th data-options="title:'Код действия',field:'code',width:150,sortable:true,resizable:true,fixed:true"></th>
+                    <th data-options="title:'Имя приложения',field:'appName',width:10000,sortable:true,resizable:true"></th>
+                    <th data-options="title:'Имя действия',field:'actName',width:10000,sortable:true,resizable:true"></th>
+                    <th data-options="title:'Удалено',field:'del',width:100,sortable:true,resizable:true,fixed:true"></th>
+                </tr></thead>
+                </table>
+
+                </div>
+                <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:36px;"><div style="height:100%;padding:2px;">
+                    <a  id="btnAddAct_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Добавить',iconCls:'icon-add',iconAlign:'left',size:'small'"></a>
+
+                    <a  id="btnChangeAct_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Изменить',iconCls:'icon-edit',iconAlign:'left',size:'small'"></a>
+
+                    <a  id="btnDelAct_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Удалить',iconCls:'icon-remove',iconAlign:'left',size:'small'"></a>
+
+                    <a  id="btnUpdateActs_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Обновить',iconCls:'icon-reload',iconAlign:'left',size:'small'"></a>
+
+                    <a  id="btnShowFilterActs_Module_Admin"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Фильтр',iconCls:'icon-filter',iconAlign:'left',size:'small'"></a>
+
+                    <input id="cbFixGroupsByAct_Module_Admin" data-options="with:20,height:20,checked:false,disabled:false,label:'Фиксировать группы',labelWidth:150,labelPosition:'after',labelAlign:'left'" class="easyui-checkbox"/>
+
+                </div>
+
+                </div>
+            </div>
+
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    </div>
+</div>
+</body>
+</html>

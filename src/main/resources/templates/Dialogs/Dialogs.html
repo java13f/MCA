@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Конструктор диалогов</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/imgs/dialogs/dialogs.css}"/>
+</head>
+<body>
+<div th:fragment="DialogsList" class="easyui-layout" style="width:100%;height:100%;" data-options="fit:false" >
+    <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:false" >
+        <div data-options="region:'north',collapsible:false,split:true,border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:35%;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:false" >
+            <div data-options="region:'west',collapsible:false,split:true,title:'Общие диалоги',border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:64%;height:100%;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:false" >
+                <div data-options="region:'center',collapsible:false,split:false,border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:false" >
+                    <div data-options="region:'center',collapsible:false,split:false,border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><table  id="dgDlgAll_Module_Dialogs" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'post',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%"><thead >
+                    <tr><th data-options="title:'Ид.',field:'id',width:48,sortable:true,resizable:true,fixed:true"></th>
+                        <th data-options="title:'Код',field:'code',width:70,sortable:true,resizable:true,fixed:true"></th>
+                        <th data-options="title:'Наименование',field:'name',width:100,sortable:true,resizable:true,fixed:false"></th>
+                        <th data-options="title:'Актив.',field:'is_active_name',width:70,sortable:true,resizable:true,fixed:true"></th>
+                        <th data-options="title:'Актив.',field:'is_active',width:70,sortable:true,resizable:true,fixed:true,hidden:true"></th>
+                        <th data-options="title:'Del.',field:'del',width:70,sortable:true,resizable:true,fixed:true,hidden:true"></th>
+                    </tr></thead>
+                    </table>
+
+                    </div>
+                    <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:45px;"><div style="padding:5px;">
+                        <a  id="btnAddDlgAll_Module_Dialogs"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:95,toggle:false,selected:false,plain:false,text:'Добавить',iconCls:'icon-add',iconAlign:'left',size:'small'"></a>
+
+                        <a  id="btnEditDlgAll_Module_Dialogs"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:95,toggle:false,selected:false,plain:false,text:'Изменить',iconCls:'icon-edit',iconAlign:'left',size:'small'"></a>
+
+                        <a  id="btnDeleteDlgAll_Module_Dialogs"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:95,toggle:false,selected:false,plain:false,text:'Удалить',iconCls:'icon-remove',iconAlign:'left',size:'small'"></a>
+
+                        <a  id="btnUpdateDlgAll_Module_Dialogs"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:95,toggle:false,selected:false,plain:false,text:'Обновить',iconCls:'icon-reload',iconAlign:'left',size:'small'"></a>
+
+                        <a  id="btnActivateDlgAll_Module_Dialogs"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:80,toggle:false,selected:false,plain:false,text:'Деактив.',iconAlign:'left',size:'small'"></a>
+
+                        <input id="cbDelDlgAll_Module_Dialogs" data-options="with:10,height:20,checked:false,disabled:false,label:'удал.',labelPosition:'after',labelAlign:'left'" class="easyui-checkbox"/>
+
+                    </div>
+
+                    </div>
+                </div>
+
+                </div>
+            </div>
+
+            </div>
+            <div data-options="region:'center',collapsible:false,split:false,title:'Диалоги оповещения',border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:false" >
+                <div data-options="region:'center',collapsible:false,split:false,border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><table  id="dgDlg_Module_Dialogs" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'post',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%"><thead >
+                <tr><th data-options="title:'Ид.',field:'id',width:48,sortable:false,resizable:true,fixed:true"></th>
+                    <th data-options="title:'Наименование',field:'name',width:100,sortable:false,resizable:true,fixed:false"></th>
+                    <th data-options="title:'%',field:'perc',width:35,sortable:false,resizable:true,fixed:true,hidden:false"></th>
+                    <th data-options="title:'Тип связи',field:'link_type_id',width:180,sortable:true,resizable:true,fixed:true,hidden:true"></th>
+                    <th data-options="title:'Тип связи',field:'link_type_name',width:180,sortable:true,resizable:true,fixed:true,hidden:true"></th>
+                    <th data-options="title:'Тип связи',field:'link_type_code',width:180,sortable:true,resizable:true,fixed:true,hidden:true"></th>
+                    <th data-options="title:'Удалённые записи',field:'del',width:180,sortable:true,resizable:true,fixed:true,hidden:true"></th>
+                    <th data-options="title:'Id словаря',field:'voc_id',width:180,sortable:true,resizable:true,fixed:true,hidden:true"></th>
+                    <th data-options="title:'Наименование словаря',field:'voc_name',width:180,sortable:true,resizable:true,fixed:true,hidden:false"></th>
+                </tr></thead>
+                </table>
+
+                </div>
+                <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:45px;"><div style="padding:5px;">
+                    <a  id="btnEditDlg_Module_Dialogs"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:95,toggle:false,selected:false,plain:false,text:'Изменить',iconCls:'icon-edit',iconAlign:'left',size:'small'"></a>
+
+                    <a  id="btnUpdateDlg_Module_Dialogs"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:95,toggle:false,selected:false,plain:false,text:'Обновить',iconCls:'icon-reload',iconAlign:'left',size:'small'"></a>
+
+                    <a  id="btnCopyDlg_Module_Dialogs"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:65,toggle:false,selected:false,plain:false,text:'Копи.',iconCls:'icon-',iconAlign:'left',size:'small'"></a>
+
+                </div>
+
+                </div>
+            </div>
+
+            </div>
+        </div>
+
+        </div>
+        <div data-options="region:'center',collapsible:false,split:false,border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:false" >
+            <div data-options="region:'north',collapsible:false,split:false,border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:false" >
+                <div data-options="region:'north',collapsible:false,split:true,title:'Обращения к абонентам',border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:60%;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:false" >
+                    <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><table  id="dgMsg_Module_Dialogs" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'post',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%"><thead >
+                    <tr><th data-options="title:'Ид.',field:'id',width:45,sortable:true,resizable:true,fixed:true"></th>
+                        <th data-options="title:'Ном',field:'no',width:45,sortable:true,resizable:true,fixed:true"></th>
+                        <th data-options="title:'Текст ',field:'info_ru',width:100,sortable:true,resizable:true,fixed:false"></th>
+                    </tr></thead>
+                    </table>
+
+                    </div>
+                    <div data-options="region:'south',collapsible:false,split:true,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:45px;"><div style="padding:4px;">
+                        <a  id="btnAddMsg_Module_Dialogs"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:95,toggle:false,selected:false,plain:false,text:'Добавить',iconCls:'icon-add',iconAlign:'left',size:'small'"></a>
+
+                        <a  id="btnEditMsg_Module_Dialogs"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:95,toggle:false,selected:false,plain:false,text:'Изменить',iconCls:'icon-edit',iconAlign:'left',size:'small'"></a>
+
+                        <a  id="btnDeleteMsg_Module_Dialogs"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:95,toggle:false,selected:false,plain:false,text:'Удалить',iconCls:'icon-remove',iconAlign:'left',size:'small'"></a>
+
+                        <a  id="btnUpdateMsg_Module_Dialogs"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:95,toggle:false,selected:false,plain:false,text:'Обновить',iconCls:'icon-reload',iconAlign:'left',size:'small'"></a>
+
+                    </div>
+
+                    </div>
+                </div>
+
+                </div>
+                <div data-options="region:'center',collapsible:false,split:false,border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:false" >
+                    <div data-options="region:'center',collapsible:false,split:false,border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:false" >
+                        <div data-options="region:'center',collapsible:false,split:false,title:'Ответы абонентов',border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><table  id="dgAns_Module_Dialogs" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'post',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%"><thead >
+                        <tr><th data-options="title:'Ид.',field:'id',width:48,sortable:true,resizable:true,fixed:true"></th>
+                            <th data-options="title:'Ответ',field:'value',width:1000000,sortable:true,resizable:true,fixed:false"></th>
+                            <th data-options="title:'Коментарий',field:'info',width:1000000,sortable:true,resizable:true,fixed:false"></th>
+                            <th data-options="title:'Следующее обращение',field:'next_msg_name',width:1000000,sortable:true,resizable:true,fixed:false"></th>
+                            <th data-options="title:'След.вопрос Id ',field:'next_msg_id',hidden:true"></th>
+                        </tr></thead>
+                        </table>
+
+                        </div>
+                        <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:45px;"><div style="padding:5px;">
+                            <a  id="btnAddAns_Module_Dialogs"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:95,toggle:false,selected:false,plain:false,text:'Добавить',iconCls:'icon-add',iconAlign:'left',size:'small'"></a>
+
+                            <a  id="btnEditAns_Module_Dialogs"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:95,toggle:false,selected:false,plain:false,text:'Изменить',iconCls:'icon-edit',iconAlign:'left',size:'small'"></a>
+
+                            <a  id="btnDeleteAns_Module_Dialogs"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:95,toggle:false,selected:false,plain:false,text:'Удалить',iconCls:'icon-remove',iconAlign:'left',size:'small'"></a>
+
+                            <a  id="btnUpdateAns_Module_Dialogs"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:95,toggle:false,selected:false,plain:false,text:'Обновить',iconCls:'icon-reload',iconAlign:'left',size:'small'"></a>
+
+                            <a  id="btnNextAns_Module_Dialogs"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:110,toggle:false,selected:false,plain:false,text:'След.вопрос',iconCls:'icon-back',iconAlign:'left',size:'small'"></a>
+
+                        </div>
+
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+
+                </div>
+            </div>
+
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    </div>
+</div>
+</body>
+</html>

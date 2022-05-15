@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+    <title>Список диалогов - МСА</title>
+    <th:block th:insert="Core/MainFragments :: headerfiles"></th:block>
+    <style type="text/css">
+        .datagrid-row-over td{
+            background: #eaf2ff;
+        }
+        .datagrid-row-selected td{
+            background: #ffe48d;
+        }
+    </style>
+</head>
+<body style="user-select:none;">
+<div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true">
+    <th:block th:insert="Core/MainFragments :: HeaderPage"></th:block>
+    <th:block th:insert="Core/MainFragments :: MenuPage(SideMenuSelectedId='DialogsList')"></th:block>
+    <div id="rDialogsList_Module_DialogsList" data-options="region:'center',title:'Список диалогов'"></div>
+    <div id="ModalWindows"></div>
+</div>
+<script type="module" th:inline="javascript">
+    import {StartNestedModule} from "../Modules/DialogsList/DialogsList.js";
+    $(document).ready(function(){
+        contextPath = /*[[${#request.contextPath}]]*/ "";
+        StartNestedModule("rDialogsList_Module_DialogsList");
+    });
+</script>
+</body>
+</html>

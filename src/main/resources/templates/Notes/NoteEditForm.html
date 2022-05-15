@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>NoteEditForm</title>
+</head>
+<body>
+<div th:fragment="NoteEditForm" class="easyui-window" id="wNoteEdit_NoteEdit_Module_Notes"  data-options="title:'Работа с заданием на оповещение',width:1024,height:618,collapsible:false,minimizable:false,maximizable:false,closable:true,closed:false,zIndex:9000,draggable:true,resizable:false,shadow:true,inline:false,modal:true,border:true,constrain:false,iconCls:'icon-edit',noheader:false,collapsed:false,minimized:false,maximized:false">
+    <div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+        <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:55px;padding:5px;"><div class="icon-noteedit" style="display:table-cell;width:43px;height:43px;">
+        </div>
+
+            <div style="display:table-cell;vertical-align:middle;padding:3px;font-weight: bold;">
+                <span id="lbHeader_NoteEdit_Module_Notes"  style="">Работа с заданием на оповещение</span>
+
+            </div>
+
+        </div>
+        <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+            <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+                <div data-options="region:'center',collapsible:false,split:false,border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:150px;"><div style="display:table;vertical-align:middle;width:100%;height:100%;padding: 0px 10px;">
+                    <div style="display:table-row;">
+                        <div style="display:table-cell;vertical-align:middle;">
+                            <div style="display:table-row;">
+                                <div style="display:table;vertical-align:middle;width:100%;">
+                                    <div style="display:table-row;">
+                                        <div style="display:table-cell;vertical-align:middle;width:100px;padding:3px;text-align:right;">
+                                            <span style="">Ид</span>
+
+                                        </div>
+
+                                        <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                            <input  id="tbId_NoteEdit_Module_Notes"  class="easyui-textbox" data-options="multiline:false,width:300,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div style="display:table-row;">
+                                        <div style="display:table-cell;vertical-align:middle;padding:3px;text-align:right;">
+                                            <span style="">Дата и время</span>
+
+                                        </div>
+
+                                        <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                            <input  id="tbDate_NoteEdit_Module_Notes"  class="easyui-textbox" data-options="multiline:false,width:300,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div style="display:table-row;">
+                                        <div style="display:table-cell;vertical-align:middle;padding:3px;text-align:right;">
+                                            <span style="">Наименование</span>
+
+                                        </div>
+
+                                        <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                            <div  Id="tbNameToolTip_NoteEdit_Module_Notes" style="display:inline-block;">
+                                                <input  id="tbName_NoteEdit_Module_Notes"  class="easyui-textbox" data-options="multiline:false,width:385,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div style="">
+                                <div style="display:table;vertical-align:middle;width:100%;">
+                                    <div style="display:table-row;">
+                                        <div style="display:table-cell;vertical-align:middle;width:100px;padding:3px;text-align:right;">
+                                            <span style="">Общий диалог</span>
+
+                                        </div>
+
+                                        <div style="display:table-cell;vertical-align:middle;width:360px;padding:3px;">
+                                            <div  Id="tbDialogToolTip_NoteEdit_Module_Notes" style="display:inline-block;">
+                                                <input  id="tbDialog_NoteEdit_Module_Notes"  class="easyui-textbox" data-options="multiline:false,width:350,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div style="display:table-cell;vertical-align:middle;padding:3px 0px;">
+                                            <a  id="btnDialog_NoteEdit_Module_Notes"  href="javascript:void(0);" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-search',iconAlign:'left',size:'small'"></a>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div style="">
+                                <div style="display:table;vertical-align:middle;width:100%;">
+                                    <div style="display:table-row;">
+                                        <div style="display:table-cell;vertical-align:middle;width:100px;padding:3px;text-align:right;">
+                                            <span style="">Статус</span>
+
+                                        </div>
+
+                                        <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                            <input  id="tbStts_NoteEdit_Module_Notes"  class="easyui-textbox" data-options="multiline:false,width:385,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                                        </div>
+
+                                        <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div style="display:table-row;height:30px;">
+                                <div style="display:table-cell;padding: 5px 0px  0px 0px;">
+                                    <div style="display:table;border:1px solid lightgray;border-radius: 0px 0px 5px 5px;">
+                                        <div style="display:table-caption;vertical-align:middle;border:1px solid lightgray;border-bottom:0;padding:3px;border-radius: 5px 5px 0px 0px;">
+                                            <span style="">Временной диапазон, в рамках которого должны производится попытки установления соединения:</span>
+
+                                        </div>
+
+                                        <div style="display:table-row;">
+                                            <div style="display:table-cell;vertical-align:middle;height:80px;padding:3px;">
+                                                <div style="display:table;vertical-align:middle;height:50px;padding:0 10px 0 10px;">
+                                                    <div style="display:table-row;">
+                                                        <div style="display:table-cell;vertical-align:middle;width:50px;padding:3px;text-align:right;">
+                                                            <span style="">Период актуальности</span>
+
+                                                        </div>
+
+                                                        <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                                            <div  Id="dtStartToolTip_NoteEdit_Module_Notes" style="display:inline-block;">
+                                                                <input id="dtStart_NoteEdit_Module_Notes"  type="text" class="easyui-datebox" data-options="panelWidth:250,currentText:'Сегодня',closeText:'Закрыть',okText:'Ок',disabled:false"/>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div style="display:table-cell;vertical-align:middle;width:35px;text-align:center;">
+                                                            <span style="">–</span>
+
+                                                        </div>
+
+                                                        <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                                            <div  Id="dtEndToolTip_NoteEdit_Module_Notes" style="display:inline-block;">
+                                                                <input id="dtEnd_NoteEdit_Module_Notes"  type="text" class="easyui-datebox" data-options="panelWidth:250,currentText:'Сегодня',closeText:'Закрыть',okText:'Ок',disabled:false"/>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div style="display:table-row;">
+                                                        <div style="display:table-cell;vertical-align:middle;width:50px;padding:3px;text-align:right;">
+                                                            <span style="">Время с</span>
+
+                                                        </div>
+
+                                                        <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                                            <div  Id="tpStartToolTip_NoteEdit_Module_Notes" style="display:inline-block;">
+                                                                <input  id="tpStart_NoteEdit_Module_Notes" class="easyui-timespinner" data-options="showSeconds:true">
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div style="display:table-cell;vertical-align:middle;width:35px;text-align:center;">
+                                                            <span style="">по</span>
+
+                                                        </div>
+
+                                                        <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                                            <div  Id="tpEndToolTip_NoteEdit_Module_Notes" style="display:inline-block;">
+                                                                <input  id="tpEnd_NoteEdit_Module_Notes" class="easyui-timespinner" data-options="showSeconds:true">
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div style="display:table-row;">
+                                            <div style="display:table-cell;vertical-align:middle;height:60px;padding:3px;">
+                                                <div style="display:table;vertical-align:bottom;height:50px;">
+                                                    <div style="display:table-row;">
+                                                        <div style="display:table-cell;vertical-align:middle;width:85px;padding:3px 8px 0px 3px;text-align:right;">
+                                                            <span style="">Дни</span>
+
+                                                        </div>
+
+                                                        <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                                            <input id="chbDay1_NoteEdit_Module_Notes" data-options="with:28,height:20,checked:false,disabled:false,label:'Понедельник',labelWidth:90,labelPosition:'after',labelAlign:'left'" class="easyui-checkbox"/>
+
+                                                        </div>
+
+                                                        <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                                            <input id="chbDay2_NoteEdit_Module_Notes" data-options="with:20,height:20,checked:false,disabled:false,label:'Вторник',labelWidth:65,labelPosition:'after',labelAlign:'left'" class="easyui-checkbox"/>
+
+                                                        </div>
+
+                                                        <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                                            <input id="chbDay3_NoteEdit_Module_Notes" data-options="with:28,height:20,checked:false,disabled:false,label:'Среда',labelWidth:90,labelPosition:'after',labelAlign:'left'" class="easyui-checkbox"/>
+
+                                                        </div>
+
+                                                        <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                                            <input id="chbDay4_NoteEdit_Module_Notes" data-options="with:28,height:20,checked:false,disabled:false,label:'Четверг',labelWidth:60,labelPosition:'after',labelAlign:'left'" class="easyui-checkbox"/>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div style="display:table-row;">
+                                                        <div style="display:table-cell;vertical-align:top;padding:0px 3px 3px 3px;text-align:right;">
+                                                            <span style="">недели</span>
+
+                                                        </div>
+
+                                                        <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                                            <input id="chbDay5_NoteEdit_Module_Notes" data-options="with:28,height:20,checked:false,disabled:false,label:'Пятница',labelWidth:90,labelPosition:'after',labelAlign:'left'" class="easyui-checkbox"/>
+
+                                                        </div>
+
+                                                        <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                                            <input id="chbDay6_NoteEdit_Module_Notes" data-options="with:20,height:20,checked:false,disabled:false,label:'Суббота',labelWidth:65,labelPosition:'after',labelAlign:'left'" class="easyui-checkbox"/>
+
+                                                        </div>
+
+                                                        <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                                            <input id="chbDay7_NoteEdit_Module_Notes" data-options="with:28,height:20,checked:false,disabled:false,label:'Воскресенье',labelWidth:90,labelPosition:'after',labelAlign:'left'" class="easyui-checkbox"/>
+
+                                                        </div>
+
+                                                        <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                </div>
+                <div data-options="region:'south',collapsible:false,split:false,border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:75px;padding: 0px 10px;"><div style="display:table-row;">
+                    <div style="display:table-cell;vertical-align:middle;padding:3px;text-align:right;">
+                        <span style="">Создано</span>
+
+                    </div>
+
+                    <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                        <input  id="tbCreated_NoteEdit_Module_Notes"  class="easyui-textbox" data-options="multiline:false,width:150,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                    </div>
+
+                    <div style="display:table-cell;width:10px;">
+                    </div>
+
+                    <div style="display:table-cell;vertical-align:middle;padding:3px;text-align:right;">
+                        <span style="">Создал</span>
+
+                    </div>
+
+                    <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                        <input  id="tbCreator_NoteEdit_Module_Notes"  class="easyui-textbox" data-options="multiline:false,width:217,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                    </div>
+
+                </div>
+
+                    <div style="display:table-row;padding:5px;">
+                        <div style="display:table-cell;vertical-align:middle;padding:3px;text-align:right;">
+                            <span style="">Изменено</span>
+
+                        </div>
+
+                        <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                            <input  id="tbChanged_NoteEdit_Module_Notes"  class="easyui-textbox" data-options="multiline:false,width:150,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                        </div>
+
+                        <div style="display:table-cell;width:10px;">
+                        </div>
+
+                        <div style="display:table-cell;vertical-align:middle;padding:3px;text-align:right;">
+                            <span style="">Изменил</span>
+
+                        </div>
+
+                        <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                            <input  id="tbChanger_NoteEdit_Module_Notes"  class="easyui-textbox" data-options="multiline:false,width:217,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            </div>
+            <div data-options="region:'east',collapsible:false,split:false,border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:475px;height:100%;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+                <div data-options="region:'center',collapsible:false,split:false,title:'Абоненты для оповещения',border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+                    <div data-options="region:'center',collapsible:false,split:false,border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><table  id="dgAbons_NoteEdit_Module_Notes" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'post',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:false,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%"><thead >
+                    <tr><th data-options="title:'Ид',field:'id',width:120,sortable:true,resizable:true,fixed:true"></th>
+                        <th data-options="title:'Приоритет',field:'priority',width:100,align:'center',sortable:true,resizable:true,fixed:true"></th>
+                        <th data-options="title:'Абонент',field:'name',width:10000,sortable:true,resizable:true,fixed:false"></th>
+                        <th data-options="title:'',field:'itemId',hidden:true"></th>
+                        <th data-options="title:'',field:'del',hidden:true"></th>
+                    </tr></thead>
+                    </table>
+
+                    </div>
+                    <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:39px;"><div style="display:table-cell;padding:3px;">
+                        <a  id="btnAddAbon_NoteEdit_Module_Notes"  href="javascript:void(0);" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Добавить',iconCls:'icon-add',iconAlign:'left',size:'small'"></a>
+
+                        <a  id="btnChangeAbon_NoteEdit_Module_Notes"  href="javascript:void(0);" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Изменить',iconCls:'icon-edit',iconAlign:'left',size:'small'"></a>
+
+                        <a  id="btnDelAbon_NoteEdit_Module_Notes"  href="javascript:void(0);" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Удалить',iconCls:'icon-remove',iconAlign:'left',size:'small'"></a>
+
+                        <input id="chbAddAbon_NoteEdit_Module_Notes" data-options="with:20,height:20,checked:false,disabled:false,label:'Удаленные',labelPosition:'after',labelAlign:'left'" class="easyui-checkbox"/>
+
+                    </div>
+
+                    </div>
+                </div>
+
+                </div>
+            </div>
+
+            </div>
+        </div>
+
+        </div>
+        <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:39px;"><div style="display:table;width:100%;">
+            <div style="display:table-cell;text-align:right;padding:3px;">
+                <a  id="btnOk_NoteEdit_Module_Notes"  href="javascript:void(0);" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'OK',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+
+                <a  id="btnCancel_NoteEdit_Module_Notes"  href="javascript:void(0);" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Отмена',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+
+            </div>
+
+        </div>
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+
+<!--input  id="ss"  class="easyui-timespinner" data-options="showSeconds:true"-->

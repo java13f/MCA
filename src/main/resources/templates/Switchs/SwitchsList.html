@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div th:fragment="SwitchsList" class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+    <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:55px;"><div style="display:table;">
+    <div class="icon-SwIconDirectory" style="display:table-cell;width:53px;height:53px;"></div>
+    <div style="display:table-cell;font-weight:bold; padding-left:5px; vertical-Align:middle;">
+        <span id="heading_Module_Switchs">Работа с коммутацией</span>
+    </div>
+    </div>
+    </div>
+    <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;">
+        <table  th:id="${prefix}+'dgSwitchs_Module_Switchs'" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'post',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%">
+        <thead><tr>
+        <th data-options="title:'Ид.',field:'id',width:37,sortable:true,resizable:true,fixed:true"></th>
+        <th data-options="title:'Тип<br>комму<br>тации',field:'tp_km',width:72,sortable:true,resizable:true,fixed:true"></th>
+        <th data-options="title:'Наименование',field:'name',width:75,sortable:true,resizable:true,fixed:false"></th>
+        <th data-options="title:'Тел.<br>по<br>пыток',field:'tl_attempts',width:53,sortable:true,resizable:true,fixed:true"></th>
+        <th data-options="title:'Тел. <br>между<br> попыт<br>ками',field:'tl_btw_attempts',width:50,sortable:true,resizable:true,fixed:true"></th>
+        <th data-options="title:'Тел.<br> между<br> набор<br>ами',field:'tl_btw_sets',width:50,sortable:true,resizable:true,fixed:true"></th>
+        <th data-options="title:'Тел.<br> па<br>уза',field:'tl_pause',width:50,sortable:true,resizable:true,fixed:true"></th>
+        <th data-options="title:'SMS<br> по<br>пы<br>ток',field:'sms_attempts',width:50,sortable:true,resizable:true,fixed:true"></th>
+        <th data-options="title:'SMS<br> па<br>уза',field:'sms_pause',width:50,sortable:true,resizable:true,fixed:true"></th>
+        <th data-options="title:'Email<br> по<br>пыток',field:'email_attempts',width:50,sortable:true,resizable:true,fixed:true"></th>
+        <th data-options="title:'Email<br> пауза',field:'email_pause',width:40,sortable:true,resizable:true,fixed:true"></th>
+        </tr></thead>
+    </table>
+    </div>
+    <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:39px;">
+        <div style="display:table;width:100%;">
+            <div style="display:table-cell;padding:3px">
+            <div style="display:inline-block;width:2px;">
+        </div>
+    <a  th:id="${prefix}+'btnChange_Module_Switchs'" href="javascript:void(0)" class="easyui-linkbutton"  data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Изменить',iconCls:'icon-edit',iconAlign:'left',size:'small'"></a>
+    <div style="display:inline-block;width:2px;"></div>
+    <a  th:id="${prefix}+'btnUpdate_Module_Switchs'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Обновить',iconCls:'icon-reload',iconAlign:'left',size:'small'"></a>
+    <div style="display:inline-block;width:20px;"></div>
+        <span style="display: none;">
+            <input th:id="${prefix}+'cbShowDel_Module_Switchs'"  data-options="with:20,height:20,checked:false,disabled:false,label:'Удаленные',labelWidth:120,labelPosition:'after',labelAlign:'left'" class="easyui-checkbox"/>
+        </span>
+    </div>
+    <div th:id="${prefix}+'pOkCancel_Module_Switchs'"  style="display:table-cell;width:150px;padding: 3px; text-align:right; visibility:hidden;"><!--visibility:hidden;-->
+        <a  th:id="${prefix}+'btnOk_Module_Switchs'" href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'OK',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+        <div style="display:inline-block;width:3px;"></div>
+        <a  th:id="${prefix}+'btnCancel_Module_Switchs'" href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Отмена',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+    </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>
+

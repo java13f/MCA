@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div th:fragment="UserSettings" class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+    <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:55px;"><div style="display:table;">
+        <div class="icon-editmode" style="display:table-cell;width:53px;height:53px;">
+        </div>
+
+        <div style="display:table-cell;vertical-align:middle;font-weight:bold;padding-left:5px;">
+            <span style="">Настройки пользователя</span>
+
+        </div>
+
+    </div>
+
+    </div>
+    <div data-options="region:'center',collapsible:false,split:false,title:'Смена пароля',border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div style="display:table;">
+        <div style="display:table-cell;width:15px;">
+        </div>
+
+        <div style="display:table-cell;width:175px;text-align:right">
+            <span style="">Текущий пароль</span>
+
+        </div>
+
+        <div style="display:table-cell;padding:3px;">
+            <input  id="txCurrentPassword_Module_UserSettings"  class="easyui-textbox" data-options="multiline:false,width:300,prompt:'',value:'',type:'password',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="password"/>
+
+        </div>
+
+    </div>
+
+        <div style="display:table;">
+            <div style="display:table-cell;width:15px;">
+            </div>
+
+            <div style="display:table-cell;width:175px;text-align:right">
+                <span style="">Новый пароль</span>
+
+            </div>
+
+            <div style="display:table-cell;padding:3px;">
+                <input  id="txNewPassword_Module_UserSettings"  class="easyui-textbox" data-options="multiline:false,width:300,prompt:'',value:'',type:'password',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="password"/>
+
+                <div style="display:inline-block;color:red;">
+                    <span id="lChkNewPassword_Module_UserSettings"  style="">Ошибки проверки пароля</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div style="display:table;">
+            <div style="display:table-cell;width:15px;">
+            </div>
+
+            <div style="display:table-cell;width:175px;text-align:right">
+                <span style="">Повторить новый пароль</span>
+
+            </div>
+
+            <div style="display:table-cell;padding:3px;">
+                <input  id="txRepeatNewPassword_Module_UserSettings"  class="easyui-textbox" data-options="multiline:false,width:300,prompt:'',value:'',type:'password',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="password"/>
+
+                <div style="display:inline-block;color:red;">
+                    <span id="lChkRepeatNewPassword_Module_UserSttings" style="">Ошибки проверки повторения пароля</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:39px;"><div style="display:table;width:100%;">
+        <div style="display:table-cell;padding:3px;">
+            <a  id="btnChangePassword_Module_UserSettings"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Изменить пароль',iconCls:'icon-reload',iconAlign:'left',size:'small'"></a>
+
+        </div>
+
+    </div>
+
+    </div>
+</div>
+</body>
+</html>

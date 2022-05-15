@@ -1,0 +1,27 @@
+.icon-play{
+    background:url('play.png') no-repeat center center;
+    background-size:cover;
+}
+.icon-stop{
+    background:url('stop.png') no-repeat center center;
+    background-size:cover;
+}
+.icon-warning{
+    background:url('warning.png') no-repeat center center;
+    background-size:cover;
+}
+
+.icon-copy{
+     background:url('copy.png') no-repeat center center;
+     background-size:cover;
+ }
+
+.icon-active{
+    background:url('active.png') no-repeat center center;
+    background-size:cover;
+}
+
+.icon-deactive{
+    background:url('deactive.png') no-repeat center center;
+    background-size:cover;
+}

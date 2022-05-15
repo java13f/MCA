@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div th:fragment="GoViewList" class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+
+
+
+
+    <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:false" >
+        <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:42px;"><div style="display:table;width:100%;height:100%;">
+            <div style="display:table-row;">
+                <div style="display:table-cell;width:100%;padding:5px;">
+                    <span style="">Шаблон оповещения:</span>
+
+                    <select id="cbPttrn_Module_GoView"  class="easyui-combobox" data-options="height:28,width:200,panelHeight:200,selectOnNavigation:true,editable:false,disabled:false,readonly:false,value:'',valueField:'id',textField:'name'">
+                    </select>
+                    <span style=""> Задание:</span>
+
+                    <select id="cbTasks_Module_GoView"  class="easyui-combobox" data-options="height:28,width:200,panelHeight:200,selectOnNavigation:true,editable:false,disabled:false,readonly:false,value:'',valueField:'id',textField:'name'">
+                    </select>
+                    <a  id="btnUpdate_Module_GoView"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Обновить',iconCls:'icon-reload',iconAlign:'left',size:'small'"></a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        </div>
+        <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:false" >
+            <div data-options="region:'north',collapsible:false,split:false,title:'Абоненты',border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:74px;"><div style="display:table;width:100%;">
+                <div style="display:table-row;">
+                    <div style="display:table-cell;padding:5px;">
+                        <span style="">Всего:</span>
+
+                        <input  id="txAll_Module_GoView"  class="easyui-textbox" data-options="multiline:false,width:48,prompt:'',value:'0',type:'text',editable:true,disabled:false,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                        <span style="">Очередь:</span>
+
+                        <input  id="txQueue_Module_GoView"  class="easyui-textbox" data-options="multiline:false,width:48,prompt:'',value:'0',type:'text',editable:true,disabled:false,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                        <span style=""> Оповещается:</span>
+
+                        <input  id="txNote_Module_GoView"  class="easyui-textbox" data-options="multiline:false,width:48,prompt:'',value:'0',type:'text',editable:true,disabled:false,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                        <span style="">Закончено:</span>
+
+                        <input  id="txEnd_Module_GoView"  class="easyui-textbox" data-options="multiline:false,width:48,prompt:'',value:'0',type:'text',editable:true,disabled:false,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                        <span style="">Удачно:</span>
+
+                        <input  id="txSeccess_Module_GoView"  class="easyui-textbox" data-options="multiline:false,width:48,prompt:'',value:'0',type:'text',editable:true,disabled:false,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                        <span style="">Не удалось:</span>
+
+                        <input  id="txFail_Module_GoView"  class="easyui-textbox" data-options="multiline:false,width:48,prompt:'',value:'0',type:'text',editable:true,disabled:false,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            </div>
+            <div data-options="region:'center',collapsible:false,split:false,title:'Сервера',border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:false" >
+                <div id="pnAster_Module_GoView"  data-options="region:'west',collapsible:false,split:false,title:'Asterisk',border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:33%;height:100%;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:false" >
+                    <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:40px;"><div style="padding:5px;">
+                        <span style="">Сервер</span>
+
+                        <select id="cbAster_Module_GoView"  class="easyui-combobox" data-options="height:28,width:180,panelHeight:200,selectOnNavigation:true,editable:false,disabled:false,readonly:false,value:'',valueField:'id',textField:'name'">
+                        </select>
+                    </div>
+
+                    </div>
+                    <div id="pnQueAster_Module_GoView"  data-options="region:'center',collapsible:false,split:false,title:'Очередь',border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><table  id="dgAsterQueue_Module_GoView" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'post',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%"><thead >
+                    <tr><th data-options="title:'Приор.',field:'prior',width:48,sortable:true,resizable:true,fixed:true"></th>
+                        <th data-options="title:'Фамилия',field:'abon_fam_io',width:10000,sortable:true,resizable:true"></th>
+                        <th data-options="title:'Телефон',field:'pin_code_view',width:10000,sortable:true,resizable:true,fixed:false"></th>
+                        <th data-options="title:'Время',field:'time',width:60,sortable:true,resizable:true,fixed:true"></th>
+                    </tr></thead>
+                    </table>
+
+                    </div>
+                    <div id="pnNoteAster_Module_GoView"  data-options="region:'south',collapsible:false,split:false,title:'Оповешаются',border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:45%;"><table  id="dgAsterNotes_Module_GoView" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'post',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%"><thead >
+                    <tr><th data-options="title:'Фамилия',field:'abon_fam_io',width:100000,sortable:true,resizable:true"></th>
+                        <th data-options="title:'Телефон',field:'pin_code_view',width:100000,sortable:true,resizable:true"></th>
+                        <th data-options="title:'Время',field:'time',width:60,sortable:true,resizable:true,fixed:true"></th>
+                    </tr></thead>
+                    </table>
+
+                    </div>
+                </div>
+
+                </div>
+                <div id="pnSMS_Module_GoView"  data-options="region:'center',collapsible:false,split:false,title:'SMS',border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:false" >
+                    <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:40px;"><div style="padding:5px;">
+                        <span style="">Сервер</span>
+
+                        <select id="cbSms_Module_GoView"  class="easyui-combobox" data-options="height:28,width:180,panelHeight:200,selectOnNavigation:true,editable:false,disabled:false,readonly:false,value:'',valueField:'id',textField:'name'">
+                        </select>
+                    </div>
+
+                    </div>
+                    <div id="pnQueSMS_Module_GoView"  data-options="region:'center',collapsible:false,split:false,title:'Очередь',border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><table  id="dgSMSQueue_Module_GoView" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'post',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%"><thead >
+                    <tr><th data-options="title:'Приор.',field:'prior',width:48,sortable:true,resizable:true,fixed:true"></th>
+                        <th data-options="title:'Фамилия',field:'abon_fam_io',width:10000,sortable:true,resizable:true"></th>
+                        <th data-options="title:'Телефон',field:'pin_code_view',width:10000,sortable:true,resizable:true,fixed:false"></th>
+                        <th data-options="title:'Время',field:'time',width:60,sortable:true,resizable:true,fixed:true"></th>
+                    </tr></thead>
+                    </table>
+
+                    </div>
+                    <div id="pnNoteSMS_Module_GoView"  data-options="region:'south',collapsible:false,split:false,title:'Оповешаются',border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:45%;"><table  id="dgSMSNotes_Module_GoView" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'post',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%"><thead >
+                    <tr><th data-options="title:'Фамилия',field:'abon_fam_io',width:100000,sortable:true,resizable:true"></th>
+                        <th data-options="title:'Телефон',field:'pin_code_view',width:100000,sortable:true,resizable:true"></th>
+                        <th data-options="title:'Время',field:'time',width:60,sortable:true,resizable:true,fixed:true"></th>
+                    </tr></thead>
+                    </table>
+
+                    </div>
+                </div>
+
+                </div>
+                <div id="pnEMAIL_Module_GoView"  data-options="region:'east',collapsible:false,split:false,title:'E-Mail',border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:33%;height:100%;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:false" >
+                    <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:40px;"><div style="padding:5px;">
+                        <span style="">Сервер</span>
+
+                        <select id="cbEMail_Module_GoView"  class="easyui-combobox" data-options="height:28,width:180,panelHeight:200,selectOnNavigation:true,editable:false,disabled:false,readonly:false,value:'',valueField:'id',textField:'name'">
+                        </select>
+                    </div>
+
+                    </div>
+                    <div id="pnQueEMail_Module_GoView"  data-options="region:'center',collapsible:false,split:false,title:'Очередь',border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><table  id="dgEMailQueue_Module_GoView" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'post',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%"><thead >
+                    <tr><th data-options="title:'Приор.',field:'prior',width:48,sortable:true,resizable:true,fixed:true"></th>
+                        <th data-options="title:'Фамилия',field:'abon_fam_io',width:10000,sortable:true,resizable:true"></th>
+                        <th data-options="title:'Адрес',field:'pin_code_view',width:10000,sortable:true,resizable:true,fixed:false"></th>
+                        <th data-options="title:'Время',field:'time',width:60,sortable:true,resizable:true,fixed:true"></th>
+                    </tr></thead>
+                    </table>
+
+                    </div>
+                    <div id="pnNoteEMail_Module_GoView"  data-options="region:'south',collapsible:false,split:false,title:'Оповешаются',border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:45%;"><table  id="dgEMailNotes_Module_GoView" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'post',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%"><thead >
+                    <tr><th data-options="title:'Фамилия',field:'abon_fam_io',width:100000,sortable:true,resizable:true"></th>
+                        <th data-options="title:'Адрес',field:'pin_code_view',width:100000,sortable:true,resizable:true"></th>
+                        <th data-options="title:'Время',field:'time',width:60,sortable:true,resizable:true,fixed:true"></th>
+                    </tr></thead>
+                    </table>
+
+                    </div>
+                </div>
+
+                </div>
+            </div>
+
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    </div>
+
+
+
+
+
+
+</div>
+</body>
+</html>

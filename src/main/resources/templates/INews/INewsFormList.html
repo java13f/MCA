@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div th:fragment="INewsFormList" class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+    <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:55px;"><div style="display:table;">
+        <div class="icon-inews" style="display:table-cell;width:53px;height:53px;">
+        </div>
+
+        <div style="display:table-cell;vertical-align:middle;font-weight:bold;padding-left:5px;">
+            <span style="">Управление новостями</span>
+
+        </div>
+
+    </div>
+
+    </div>
+    <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><table  id="dgINews_Module_INews" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'post',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:true,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,pagePosition:'bottom',pageNumber:1,pageSize:50,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%"><thead >
+    <tr><th data-options="title:'',field:'status_icon',width:32,fixed:true"></th>
+        <th data-options="title:'ID',field:'id',width:80,sortable:true,resizable:true,fixed:true"></th>
+        <th data-options="title:'Дата',field:'date',width:230,sortable:true,resizable:true,fixed:true"></th>
+        <th data-options="title:'Наименование',field:'title',width:10000,sortable:true,resizable:true"></th>
+    </tr></thead>
+    </table>
+
+    </div>
+    <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:39px;"><div style="display:table;width:100%;">
+        <div style="display:table-cell;padding:3px;">
+            <a  id="btnAdd_Module_INews"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Добавить',iconCls:'icon-add',iconAlign:'left',size:'small'"></a>
+
+            <a  id="btnChange_Module_INews"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Изменить',iconCls:'icon-edit',iconAlign:'left',size:'small'"></a>
+
+            <a  id="btnDelete_Module_INews"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Удалить',iconCls:'icon-remove',iconAlign:'left',size:'small'"></a>
+
+            <a  id="btnShowFilter_Module_INews"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Фильтр',iconCls:'icon-filter',iconAlign:'left',size:'small'"></a>
+
+            <a  id="btnUpdate_Module_INews"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Обновить',iconCls:'icon-reload',iconAlign:'left',size:'small'"></a>
+
+        </div>
+
+    </div>
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+.icon-service{
+    background:url('service.png') no-repeat center center;
+}
+.icon-import{
+    background:url('import.png') no-repeat center center;
+}
+.icon-administrator{
+    background:url('Administrator.png') no-repeat center center;
+    background-size:cover;
+}
+.icon-listabons{
+    background:url('listabons.png') no-repeat center center;
+    background-size:cover;
+}
+.icon-download{
+    background:url('download_48px.png') no-repeat center center;
+    background-size:cover;
+}
+.icon-select{
+    background:url('select_16px.png') no-repeat center center;
+    background-size:cover;
+}
+.icon-addabon{
+    background:url('addAbon.png') no-repeat center center;
+    background-size:cover;
+}

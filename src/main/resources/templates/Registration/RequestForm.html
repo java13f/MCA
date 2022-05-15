@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+    <title>Печать запроса на сертификацию ключей - АС I-Казначейство</title>
+    <th:block th:insert="Core/MainFragments :: headerfiles"></th:block>
+</head>
+<body style="user-select:none;">
+<div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true">
+    <th:block th:insert="Core/MainFragments :: HeaderPage"></th:block>
+    <div id="rRequestForm_Module_Registration" data-options="region:'center',title:'Регистрация нового пользователя завершена'">
+    </div>
+</div>
+</body>
+</html>

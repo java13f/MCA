@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>АС I-Казначейство</title>
+    <th:block th:insert="Core/MainFragments :: headerfiles"></th:block>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/suneditor/suneditor.min.css}" />
+</head>
+<body style="user-select:none;">
+<div id="lShowOneNews_Module_MainApp" class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true">
+    <th:block th:insert="Core/MainFragments :: HeaderPage"></th:block>
+    <th:block th:insert="Core/MainFragments :: MenuPage(SideMenuSelectedId='')"></th:block>
+        <div id="rShowOneNews_Module_MainApp" data-options="region:'center'" style="user-select:text !important;">
+            <span class="sun-editor-editable" th:utext="${content}"></span>
+    </div>
+</div>
+<script type="text/javascript" th:inline="javascript">
+    $(document).ready(function(){
+        title = /*[[${title}]]*/ "";
+        contextPath = /*[[${#request.contextPath}]]*/ "";
+        let center_region = $("#lShowOneNews_Module_MainApp").layout("panel","center");
+        center_region.panel({title: title});
+    });
+</script>
+</body>
+</html>

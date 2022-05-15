@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!-- th:fragment="AbonsFormEditGroup" -->
+<body>
+
+<div th:fragment="AbonsFormEditGroup" class="easyui-window" id="wAbonsFormEditGroup_Module_Abons"
+     data-options="title:'Работа с группой',width:614,height:380,collapsible:false,minimizable:false,maximizable:false,closable:true,closed:false,zIndex:9000,draggable:true,resizable:false,shadow:true,inline:false,modal:true,border:true,constrain:false,iconCls:'icon-edit',noheader:false,collapsed:false,minimized:false,maximized:false">
+    <div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true">
+        <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null"
+             style="width:100%;height:55px;">
+            <div style="display:table;height:53px;">
+                <div style="display:table-row;">
+                    <div Id="pbEditMode_Abons_AbonsFormEdit" class="icon-addmode"
+                         style="display:table-cell;width:55px;">
+                    </div>
+
+                    <div style="display:table-cell;vertical-align:middle;font-weight:bold; padding:3px;">
+                        <span id="lAction_Module_Abons_AbonsFormEditGroup" style="">Добавление / Редактирование группы абонентов</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null"
+             style="width:100%;height:100%;">
+            <div style="display:table;padding: 3px">
+                <div style="display:table-row;">
+                    <div style="display:table-cell;height:10px;">
+                    </div>
+
+                </div>
+
+                <div style="display:table-row;padding: 3px">
+                    <div style="display:table-cell;width:25px;">
+                    </div>
+
+                    <div style="display:table-cell;text-align:right; padding: 3px">
+                        <span style="">Ид.</span>
+
+                    </div>
+
+                    <div style="display:table-cell;padding:3px;">
+                        <input id="txId_Module_Abons_AbonsFormEditGroup" class="easyui-textbox"
+                               data-options="multiline:false,width:300,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"
+                               type="text"/>
+
+                    </div>
+
+                </div>
+
+                <div style="display:table-row;padding:3px">
+                    <div style="display:table-cell;width:25px;">
+                    </div>
+
+                    <div style="display:table-cell;text-align:right; padding:3px">
+                        <span style="">Код</span>
+
+                    </div>
+
+                    <div Id="divCode_Module_Abons_AbonsFormEditGroup" style="display:table-cell;padding: 3px">
+                        <input id="txCode_Module_Abons_AbonsFormEditGroup" class="easyui-textbox"
+                               data-options="multiline:false,width:300,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"
+                               type="text"/>
+
+                    </div>
+
+                </div>
+
+                <div style="display:table-row;">
+                    <div style="display:table-cell;width:25px;">
+                    </div>
+
+                    <div style="display:table-cell;text-align: right; padding: 3px">
+                        <span style="">Наименование</span>
+
+                    </div>
+
+                    <div Id="divName_Module_Abons_AbonsFormEditGroup" style="display:table-cell;padding:3px">
+                        <input id="txName_Module_Abons_AbonsFormEditGroup" class="easyui-textbox"
+                               data-options="multiline:false,width:450,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"
+                               type="text"/>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div style="display:table;padding:3px;">
+                <div style="display:table-row;">
+                    <div style="display:table-cell;height:30px;">
+                    </div>
+
+                </div>
+
+                <div style="display:table-row;padding: 3px">
+                    <div style="display:table-cell;width:25px;">
+                    </div>
+
+                    <div style="display:table-cell;padding:3px; text-align:right">
+                        <span style="">Создал</span>
+
+                    </div>
+
+                    <div style="display:table-cell;padding:3px">
+                        <input id="txCreator_Module_Abons_AbonsFormEditGroup" class="easyui-textbox"
+                               data-options="multiline:false,width:208,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"
+                               type="text"/>
+
+                    </div>
+
+                    <div style="display:table-cell;padding:3px; text-align:right;">
+                        <span style="">Создано</span>
+
+                    </div>
+
+                    <div style="display:table-cell;padding:3px">
+                        <input id="txCreated_Module_Abons_AbonsFormEditGroup" class="easyui-textbox"
+                               data-options="multiline:false,width:208,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"
+                               type="text"/>
+
+                    </div>
+
+                </div>
+
+                <div style="display:table-row;padding:3px">
+                    <div style="display:table-cell;width:25px;">
+                    </div>
+
+                    <div style="display:table-cell;padding:3px; text-align: right">
+                        <span style="">Изменил</span>
+
+                    </div>
+
+                    <div style="display:table-cell;padding:3px">
+                        <input id="txChanger_Module_Abons_AbonsFormEditGroup" class="easyui-textbox"
+                               data-options="multiline:false,width:208,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"
+                               type="text"/>
+
+                    </div>
+
+                    <div style="display:table-cell;padding: 3px; text-align:right">
+                        <span style="">Изменено</span>
+
+                    </div>
+
+                    <div style="display:table-cell;padding:3px">
+                        <input id="txChanged_Module_Abons_AbonsFormEditGroup" class="easyui-textbox"
+                               data-options="multiline:false,width:208,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"
+                               type="text"/>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null"
+             style="width:100%;height:38px;">
+            <div style="height:33px;text-align:right; padding:3px">
+                <a id="btnOk_Module_Abons_AbonsFormEditGroup" href="javascript:void(0)" class="easyui-linkbutton"
+                   data-options="disabled:true,width:80,toggle:false,selected:false,plain:false,text:'OK',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+
+                <a id="btnCancel_Module_Abons_AbonsFormEditGroup" href="javascript:void(0)" class="easyui-linkbutton"
+                   data-options="disabled:false,width:80,toggle:false,selected:false,plain:false,text:'Отмена',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

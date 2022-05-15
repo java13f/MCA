@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div th:fragment="GlobalParamsFormEdit" class="easyui-window" id="wGlobalParamsFormEdit_Module_GlobalParams"
+     data-options="title:'Редактирование глобальных параметров',width:670,height:414,collapsible:false,minimizable:false,maximizable:false,closable:true,closed:false,zIndex:9000,draggable:true,resizable:false,shadow:true,inline:false,modal:true,border:true,constrain:false,iconCls:'icon-edit',noheader:false,collapsed:false,minimized:false,maximized:false">
+    <div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true">
+        <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null"
+             style="width:100%;height:55px;">
+            <div Id="pbEditMode_GlobalParams_GlobalParamsFormGlobalParams"
+                 style="display:table-cell;vertical-align:middle;width:55px;height:53px;">
+            </div>
+
+            <div style="display:table-cell;vertical-align:middle;font-weight: bold; padding:0px 10px;">
+                <span id="lAction_Module_GlobalParamsForm" style="">Редактирование глобальных параметров</span>
+            </div>
+
+        </div>
+        <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null"
+             style="width:100%;height:100%;">
+            <div style="display:table;width:100%;">
+                <div style="display:table-row;height:15px;;">
+                </div>
+
+                <div style="display:table-row;">
+                    <div style="display:table-cell;width:20px;">
+                    </div>
+
+                    <div style="display:table-cell;width:200px;">
+                        <span style="">Идентификатор записи</span>
+
+                    </div>
+
+                    <div style="display:table-cell;">
+                        <input id="txIdParametr_Module_GlobalParams_GlobalParamsEdit" class="easyui-textbox"
+                               data-options="multiline:false,width:300,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"
+                               type="text"/>
+
+                    </div>
+
+                    <div style="display:table-cell;">
+                    </div>
+
+                </div>
+
+                <div style="display:table-row;height:5px;;">
+                </div>
+
+                <div style="display:table-row;">
+                    <div style="display:table-cell;width:20px;">
+                    </div>
+
+                    <div style="display:table-cell;width:200px;">
+                        <span style="">Родитель</span>
+
+                    </div>
+
+                    <div style="display:table-cell;width:400px;">
+
+                        <input id="txParentGlPr_Module_GlobalParams_GlobalParamsEdit" class="easyui-textbox"
+                               data-options="multiline:false,width:390,prompt:'',value:'',type:'text',editable:false,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'icon-search',buttonAlign:'right'"
+                               type="text"/>
+
+                    </div>
+
+                    <div style="display:table-cell;">
+                        <a id="btnParentGlPrClear" href="javascript:void(0);" class="easyui-linkbutton"
+                           data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-clear',iconAlign:'left',size:'small'"></a>
+
+                    </div>
+
+                </div>
+
+                <div style="display:table-row;height:5px;;">
+                </div>
+
+                <div style="display:table-row;">
+                    <div style="display:table-cell;width:20px;">
+                    </div>
+
+                    <div style="display:table-cell;width:200px;">
+                        <span style="">Код параметра</span>
+
+                    </div>
+
+                    <div id="hintCodeParametr_Module_GlobalParams_GlobalParamsEdit" style="display:table-cell;">
+                        <input id="txCodeParametr_Module_GlobalParams_GlobalParamsEdit" class="easyui-textbox"
+                               data-options="multiline:false,width:300,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"
+                               type="text"/>
+                    </div>
+
+                    <div style="display:table-cell;">
+                    </div>
+
+                </div>
+
+                <div style="display:table-row;height:5px;">
+                </div>
+
+                <div style="display:table-row;">
+                    <div style="display:table-cell;width:20px;">
+                    </div>
+
+                    <div style="display:table-cell;width:200px;">
+                        <span style="">Название параметра</span>
+
+                    </div>
+
+                    <div id="hintNameParametr_Module_GlobalParams_GlobalParamsEdit" style="display:table-cell;">
+                        <input id="txNameParametr_Module_GlobalParams_GlobalParamsEdit" class="easyui-textbox"
+                               data-options="multiline:false,width:300,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"
+                               type="text"/>
+                    </div>
+
+                    <div style="display:table-cell;">
+                    </div>
+
+                </div>
+
+                <div style="display:table-row;height:5px;;">
+                </div>
+
+                <div style="display:table-row;">
+                    <div style="display:table-cell;width:20px;">
+                    </div>
+
+                    <div style="display:table-cell;width:200px;">
+                        <span style="">Значение параметра</span>
+
+                    </div>
+
+                    <div style="display:table-cell;">
+                        <input id="txValueParametr_Module_GlobalParams_GlobalParamsEdit" class="easyui-textbox"
+                               data-options="multiline:false,width:300,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"
+                               type="text"/>
+
+                    </div>
+
+                    <div style="display:table-cell;">
+                    </div>
+
+                </div>
+
+                <div style="display:table-row;height:20px;;">
+                </div>
+
+            </div>
+
+            <div style="display:table;width:100%;">
+                <div style="display:table-row;">
+                    <div style="padding: 5px 15px">
+                        <span style="">Создал</span>
+
+                    </div>
+
+                    <div style="display:table-cell;">
+                        <input id="txCreatorParametr_Module_GlobalParams_GlobalParamsEdit" class="easyui-textbox"
+                               data-options="multiline:false,width:235,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"
+                               type="text"/>
+
+                    </div>
+
+                    <div style="padding: 5px 15px">
+                        <span style="">Создано</span>
+
+                    </div>
+
+                    <div style="display:table-cell;">
+                        <input id="txCreatParametr_Module_GlobalParams_GlobalParamsEdit" class="easyui-textbox"
+                               data-options="multiline:false,width:235,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"
+                               type="text"/>
+
+                    </div>
+
+                </div>
+
+                <div style="display:table-row;height:5px;;">
+                </div>
+
+                <div style="display:table-row;">
+                    <div style="padding: 5px 15px">
+                        <span style="">Изменил</span>
+
+                    </div>
+
+                    <div style="display:table-cell;">
+                        <input id="txChangerParametr_Module_GlobalParams_GlobalParamsEdit" class="easyui-textbox"
+                               data-options="multiline:false,width:235,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"
+                               type="text"/>
+
+                    </div>
+
+                    <div style="padding: 5px 15px">
+                        <span style="">Изменено</span>
+
+                    </div>
+
+                    <div style="display:table-cell;">
+                        <input id="txChangeParametr_Module_GlobalParams_GlobalParamsEdit" class="easyui-textbox"
+                               data-options="multiline:false,width:235,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"
+                               type="text"/>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null"
+             style="width:100%;height:38px;">
+            <div style="text-align: right; padding: 3px; height:35px;">
+                <a id="btnOk_Module_GlobalParamsEdit" href="javascript:void(0);" class="easyui-linkbutton"
+                   data-options="disabled:false,width:80,toggle:false,selected:false,plain:false,text:'OK',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+
+                <a id="btnCancel_Module_GlobalParamsEdit" href="javascript:void(0);" class="easyui-linkbutton"
+                   data-options="disabled:false,width:80,toggle:false,selected:false,plain:false,text:'Отмена',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>PinListForm</title>
+</head>
+<body>
+<div th:fragment="PinListForm" class="easyui-window" id="wPinList_NotesFilter_Module_Notes"  data-options="title:'Список контактов',width:700,height:432,collapsible:false,minimizable:false,maximizable:false,closable:true,closed:false,zIndex:9000,draggable:true,resizable:false,shadow:true,inline:false,modal:true,border:true,constrain:false,noheader:false,collapsed:false,minimized:false,maximized:false">
+    <div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+        <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:55px;"><div style="display:table;padding: 5px;">
+            <div class="icon-pinico" style="display:table-cell;width:43px;height:43px;">
+            </div>
+
+            <div style="display:table-cell;vertical-align:middle;font-weight:bold;padding: 0 5px;">
+                <span id="lbHeader_PinList_Module_Notes"  style="">Список контактов, по которым неозможно произвести оповещение</span>
+
+            </div>
+
+        </div>
+
+        </div>
+        <div data-options="region:'center',collapsible:false,split:false,border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;padding: 0px;"><table  id="dgPin_PinList_Module_Notes" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'post',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:false,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%"><thead >
+        <tr><th data-options="title:'Ид',field:'id',width:100,sortable:true,resizable:true,fixed:true"></th>
+            <th data-options="title:'Абонент',field:'abonName',width:10000,sortable:true,resizable:true,fixed:false"></th>
+            <th data-options="title:'Тип контакта',field:'switchName',width:10000,sortable:true,resizable:true,fixed:false"></th>
+            <th data-options="title:'Контакт',field:'codeView',width:10000,sortable:true,resizable:true,fixed:false"></th>
+        </tr></thead>
+        </table>
+
+        </div>
+        <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:39px;"><div style="display:table;width:100%;">
+            <div style="display:table-cell;width:160px;padding:3px;text-align:right;">
+                <a  id="btnOk_PinList_Module_Notes"  href="javascript:void(0);" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'ОК',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+
+                <a  id="btnCancel_PinList_Module_Notes"  href="javascript:void(0);" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Отмена',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+
+            </div>
+
+        </div>
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

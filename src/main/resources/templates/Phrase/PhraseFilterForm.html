@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Phrase</title>
+</head>
+<body>
+<div th:fragment="PhraseFilterForm" class="easyui-window" id="wPhraseFilter_PhraseFilter_Module_Phrase"  data-options="title:'Фильтр',width:485,height:300,collapsible:false,minimizable:false,maximizable:false,closable:true,closed:false,zIndex:9000,draggable:true,resizable:false,shadow:true,inline:false,modal:true,border:true,constrain:false,iconCls:'icon-filter',noheader:false,collapsed:false,minimized:false,maximized:false">
+    <div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+        <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:55px;padding: 5px;"><div class="icon-FilterIcon" style="display:table-cell;width:43px;height:43px;">
+        </div>
+
+            <div style="display:table-cell;vertical-align:middle;padding:3px;font-weight: bold;">
+                <span id="lbHeader_PhraseFilter_Module_Phrase"  style="">Фильтр</span>
+
+            </div>
+
+        </div>
+        <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;padding-top:8px;"><div style="display:table-row;">
+            <div style="display:table-cell;width:10px;">
+            </div>
+
+            <div style="display:table-cell;vertical-align:middle;width:80px;text-align:right;">
+                <span style="">Код</span>
+
+            </div>
+
+            <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                <input  id="tbCode_PhraseFilter_Module_Phrase"  class="easyui-textbox" data-options="multiline:false,width:320,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+            </div>
+
+            <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                <a  id="btnClearCode_PhraseFilter_Module_Phrase"  href="javascript:void(0);" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-clear',iconAlign:'left',size:'small'"></a>
+
+            </div>
+
+        </div>
+
+            <div style="display:table-row;">
+                <div style="display:table-cell;width:10px;">
+                </div>
+
+                <div style="display:table-cell;vertical-align:middle;text-align:right;">
+                    <span style="">Текст фразы</span>
+
+                </div>
+
+                <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                    <input  id="tbText_PhraseFilter_Module_Phrase"  class="easyui-textbox" data-options="multiline:false,width:320,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                </div>
+
+                <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                    <a  id="btnClearText_PhraseFilter_Module_Phrase"  href="javascript:void(0);" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-clear',iconAlign:'left',size:'small'"></a>
+
+                </div>
+
+            </div>
+
+            <div style="display:table-row;">
+                <div style="display:table-cell;width:10px;">
+                </div>
+
+                <div style="display:table-cell;vertical-align:middle;text-align:right;">
+                    <span style="">Имя файла</span>
+
+                </div>
+
+                <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                    <input  id="tbFileName_PhraseFilter_Module_Phrase"  class="easyui-textbox" data-options="multiline:false,width:320,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                </div>
+
+                <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                    <a  id="btnClearFileName_PhraseFilter_Module_Phrase"  href="javascript:void(0);" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-clear',iconAlign:'left',size:'small'"></a>
+
+                </div>
+
+            </div>
+
+            <div style="display:table-row;">
+                <div style="display:table-cell;width:10px;">
+                </div>
+
+                <div style="display:table-cell;vertical-align:middle;text-align:right;">
+                    <span style=""></span>
+
+                </div>
+
+                <div style="display:table-cell;vertical-align:middle;padding:6px;">
+                    <input id="chbDel_PhraseFilter_Module_Phrase" data-options="with:20,height:20,checked:false,disabled:false,label:'Показать удаленные записи',labelWidth:200,labelPosition:'after',labelAlign:'left'" class="easyui-checkbox"/>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:39px;"><div style="display:table;width:100%;">
+            <div style="display:table-cell;padding:3px;">
+                <a  id="btnClearFilter_PhraseFilter_Module_Phrase"  href="javascript:void(0);" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Очистить фильтр',iconCls:'icon-clear',iconAlign:'left',size:'small'"></a>
+
+            </div>
+
+            <div style="display:table-cell;text-align:right;padding:3px;">
+                <a  id="btnOk_PhraseFilter_Module_Phrase"  href="javascript:void(0);" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'OK',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+
+                <a  id="btnCancel_PhraseFilter_Module_Phrase"  href="javascript:void(0);" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Отмена',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+
+            </div>
+
+        </div>
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

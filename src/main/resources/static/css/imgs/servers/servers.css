@@ -1,0 +1,11 @@
+.icon-ServersIcon{
+    background:url('serversIcon.png') no-repeat center center;
+    background-size:cover;
+}
+
+.datagrid-row-over td{
+    background: #eaf2ff;
+}
+.datagrid-row-selected td{
+    background: #ffe48d;
+}

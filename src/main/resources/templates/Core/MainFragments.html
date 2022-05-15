@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:fragment="headerfiles" th:remove="tag">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/themes/default/easyui.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/themes/icon.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/themes/app.css}"/>
+    <script type="text/javascript" th:src="@{/scripts/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/scripts/Core.js}"></script>
+    <script type="text/javascript" th:src="@{/scripts/jquery.easyui.min.js}"></script>
+    <script type="text/javascript" th:src="@{/scripts/easyui-lang-ru.js}"></script>
+    <script type="text/javascript" th:src="@{/scripts/Keys.js}"></script>
+    <script type="text/javascript" th:src="@{/scripts/FormView.js}"></script>
+</head>
+<body>
+<div th:fragment="HeaderPage" th:remove="tag">
+        <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null"
+             style="width:100%;height:65px;">
+            <div style="display:table;width:100%;">
+                <a th:href="@{/}" style="text-decoration:none">
+                <div class="icon-LPR" style="display:table-cell;width:53px;height:53px;">
+                </div>
+                <div style="display:table-cell;vertical-align:middle;width:450px;padding-left:5px;font-weight:bold;font-size:19pt;">
+                    <span>Многоканальная система автоматического оповещения <span th:utext="${@environment.getProperty('TitleAdd')}" th:remove="tag"></span></span>
+                </div>
+                </a>
+                <div style="display:table-cell;vertical-align:middle;text-align:right;padding:3px;">
+                    <div sec:authorize="isAuthenticated()" th:remove="tag">
+                        <div style="display:inline-block;font-weight:bold;padding-right:5px;">
+                            <span>
+                                <span th:utext="${#session.getAttribute('UserName')}" th:remove="tag"></span> (<span sec:authentication="name" th:remove="tag"></span>)
+                            </span>
+                        </div>
+                        <div style="display:inline-block">
+                            <form id="LogOutForm_MainUI" th:action="@{/logout}" method="get">
+                                <a id="btnLogin_MainUI" href="javascript:void(0)" class="easyui-linkbutton"
+                                   data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Выход из системы',iconAlign:'left',size:'small'"
+                                   onClick="$('#LogOutForm_MainUI').submit()"></a>
+                            </form>
+                        </div>
+                    </div>
+                    <div sec:authorize="isAnonymous()" th:remove="tag">
+                        <a id="btnSignIn_MainUI" th:href="@{/login}" class="easyui-linkbutton"
+                           data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Вход в систему',iconAlign:'left',size:'small'"></a>
+                        <a id="btnSignUp_MainUI" th:href="@{/Registration/RegistrationForm}" class="easyui-linkbutton"
+                           data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Регистрация',iconAlign:'left',size:'small'"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+<div th:fragment="MenuPage" th:remove="tag">
+        <div data-options="region:'west',collapsible:true,split:false,title:'Меню',border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null"
+             style="width:250px;height:100%;">
+            <div id="smMainMenu_MainUI" class="easyui-sidemenu"
+                 data-options="width:248,border:false,animate:true,multiple:true,floatMenuWidth:250,floatMenuPosition:'right',data:[]">
+            </div>
+        </div>
+        <script type="text/javascript" th:inline="javascript">
+            $(document).ready(function(){
+                contextPath = /*[[${#request.contextPath}]]*/ "";
+                MainMenuItemId = /*[[${SideMenuSelectedId}]]*/ '';
+                $.ajax({
+                    method: 'get',
+                    url: contextPath + '/MainApp/getApps',
+                    success: function(data){
+                        $("#smMainMenu_MainUI").sidemenu({
+                            selectedItemId: 'smMainMenu_MainUI_' + MainMenuItemId,
+                            data: data,
+                            onSelect: function(item) {window.location.href = contextPath +'/'+ item.url;}
+                        });
+                    },
+                    error: function(data){
+                        let responseJSON = data.responseJSON
+                        let error = "";
+                        if(responseJSON==null){
+                            error = data;
+                        }
+                        else {
+                            error = "message: " + responseJSON.message + "<br/>"
+                                +"error: " + responseJSON.error + "<br/>"
+                                +"status: " + responseJSON.status + "<br/>"
+                                +"path: " + responseJSON.path;
+                        }
+                        $.messager.alert("Ошибка", error, "error");
+                    }
+                });
+            });
+        </script>
+</div>
+</body>
+</html>

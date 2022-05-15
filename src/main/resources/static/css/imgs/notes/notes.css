@@ -1,0 +1,24 @@
+.icon-run{
+    background:url('run.png') no-repeat center center;
+    background-size:cover;
+}
+.icon-stop{
+    background:url('stop.png') no-repeat center center;
+    background-size:cover;
+}
+.icon-notesico{
+    background:url('notesico.png') no-repeat center center;
+    background-size:cover;
+}
+.icon-noteedit{
+    background:url('noteedit.png') no-repeat center center;
+    background-size:cover;
+}
+.icon-pattern{
+    background:url('patternedit.png') no-repeat center center;
+    background-size:cover;
+}
+.icon-pinico{
+    background:url('pinico.png') no-repeat center center;
+    background-size:cover;
+}

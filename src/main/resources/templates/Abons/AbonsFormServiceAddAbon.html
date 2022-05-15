@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!-- th:fragment="AbonsFormServiceAddAbon" -->
+<body>
+
+<div th:fragment="AbonsFormServiceAddAbon" class="easyui-window" id="wAbonsFormServiceAddAbon_Module_Abons"
+     data-options="title:'Добавить',width:614,height:380,collapsible:false,minimizable:false,maximizable:false,closable:true,closed:false,zIndex:9000,draggable:true,resizable:false,shadow:true,inline:false,modal:true,border:true,constrain:false,iconCls:'icon-add',noheader:false,collapsed:false,minimized:false,maximized:false">
+    <div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true">
+        <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null"
+             style="width:100%;height:55px;">
+            <div style="display:table;height:53px;">
+                <div style="display:table-row;">
+                    <div Id="pbEditMode_Module_Abons_AbonsFormServiceAddAbon" class="icon-addabon"
+                         style="display:table-cell;width:55px;">
+                    </div>
+
+                    <div style="display:table-cell;vertical-align:middle;font-weight:bold; padding:3px;">
+                        <span id="lAction_Module_Abons_AbonsFormServiceAddAbon" style="">Добавление абонентa для изменения тонового набора</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null"
+             style="width:100%;height:100%;">
+            <div style="display:table;padding: 3px; ">
+                <div style="display:table-row;">
+                    <div style="display:table-cell;height:20px;">
+                    </div>
+
+                </div>
+
+                <div style="display:table-row;padding: 3px">
+                    <div style="display:table-cell;width:25px;">
+                    </div>
+
+                    <div style="display:table-cell;text-align:right; padding: 3px">
+                        <span style="">Абонент</span>
+
+                    </div>
+
+                    <div Id="divAbon_Module_Abons_AbonsFormServiceAddAbon" style="display:table-cell;padding:3px;">
+                        <input id="txAbon_Module_Abons_AbonsFormServiceAddAbon" class="easyui-textbox"
+                               data-options="multiline:false,width:470,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"
+                               type="text"/>
+
+                    </div>
+
+                    <div Id="divPath_Module_Abons_AbonsFormImport" style="display:table-cell;">
+                        <a id="btnSelectAbon_Module_Abons_AbonsFormServiceAddAbon" href="javascript:void()"
+                           class="easyui-linkbutton"
+                           data-options="disabled:false,toggle:false,selected:false,plain:false,text:'...',iconAlign:'left',size:'small'"></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div style="display:table;padding: 3px; ">
+                <div style="display:table-row;">
+                    <div style="display:table-cell;height:10px;">
+                    </div>
+
+                </div>
+
+                <div style="display:table-row;padding: 3px">
+                    <div style="display:table-cell;width:25px;">
+                    </div>
+
+                    <div style="display:table-cell;text-align:right; padding: 3px">
+                        <span style="">Контакт</span>
+
+                    </div>
+
+                    <div Id="divContact_Module_Abons_AbonsFormServiceAddAbon" style="display:table-cell;padding:3px;">
+                        <select id="cbContact_Module_Abons_AbonsFormServiceAddAbon" class="easyui-combobox"
+                                data-options="height:30,width:500,panelHeight:200,selectOnNavigation:true,editable:false,disabled:false,readonly:false,value:'',valueField:'value',textField:'text'">
+                        </select>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null"
+             style="width:100%;height:38px;">
+            <div style="display:table;width:100%;">
+                <div style="display:table-row;">
+                    <div style="display:table-cell;width:282px;height:33px;text-align:right; padding:3px">
+                        <a id="btnOk_Module_Abons_AbonsFormServiceAddAbon" href="javascript:void(0)"
+                           class="easyui-linkbutton"
+                           data-options="disabled:false,width:80,toggle:false,selected:false,plain:false,text:'OK',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+
+                        <a id="btnCancel_Module_Abons_AbonsFormServiceAddAbon" href="javascript:void()"
+                           class="easyui-linkbutton"
+                           data-options="disabled:false,width:80,toggle:false,selected:false,plain:false,text:'Закрыть',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

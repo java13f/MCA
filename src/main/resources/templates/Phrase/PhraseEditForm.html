@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Phrase</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/imgs/phrase/phrase.css}"/>
+</head>
+<body>
+<div  th:fragment="PhraseEditForm" class="easyui-window" id="wPhraseEdit_PhraseEdit_Module_Phrase"  data-options="title:'Работа с фразами',width:676,height:418,collapsible:false,minimizable:false,maximizable:false,closable:true,closed:false,zIndex:9000,draggable:true,resizable:false,shadow:true,inline:false,modal:true,border:true,constrain:false,iconCls:'icon-edit',noheader:false,collapsed:false,minimized:false,maximized:false">
+    <div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+        <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:55px;padding:5px;"><div class="icon-synteze" style="display:table-cell;width:43px;height:43px;">
+        </div>
+
+            <div style="display:table-cell;vertical-align:middle;padding:3px;font-weight: bold;">
+                <span id="lbHeader_PhraseEdit_Module_Phrase"  style="">Работа с фразами</span>
+
+            </div>
+
+        </div>
+        <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;padding-top:2px;"><div style="display:table-row;">
+            <div style="display:table-cell;width:25px;">
+            </div>
+
+            <div style="display:table-cell;vertical-align:middle;text-align:right;">
+                <span style="">Ид.</span>
+
+            </div>
+
+            <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                <input  id="tbId_PhraseEdit_Module_Phrase"  class="easyui-textbox" data-options="multiline:false,width:470,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+            </div>
+
+        </div>
+
+            <div style="display:table-row;">
+                <div style="display:table-cell;width:25px;">
+                </div>
+
+                <div style="display:table-cell;vertical-align:middle;text-align:right;">
+                    <span style="">Код</span>
+
+                </div>
+
+                <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                    <div  Id="tbCodeToolTip_PhraseEdit_Module_Phrase" style="display:inline-block;">
+                        <input  id="tbCode_PhraseEdit_Module_Phrase"  class="easyui-textbox" data-options="multiline:false,width:180,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div style="display:table-row;">
+                <div style="display:table-cell;width:25px;">
+                </div>
+
+                <div style="display:table-cell;vertical-align:middle;width:90px;text-align:right;">
+                    <span style="">Текст фразы</span>
+
+                </div>
+
+                <div style="display:table-cell;vertical-align:middle;padding:3px 3px 0px 3px;">
+                    <div  Id="tbTextToolTip_PhraseEdit_Module_Phrase" style="display:inline-block;">
+                        <input  id="tbText_PhraseEdit_Module_Phrase"  class="easyui-textbox" data-options="multiline:true,width:470,height:72,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                    </div>
+
+                </div>
+
+                <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                    <a  id="btnAdd_PhraseEdit_Module_Phrase"  href="javascript:void(0);" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-add',iconAlign:'left',size:'small'"></a>
+
+                </div>
+
+            </div>
+
+            <div style="display:table-row;">
+                <div style="display:table-cell;width:25px;">
+                </div>
+
+                <div style="display:table-cell;vertical-align:middle;width:90px;text-align:right;">
+                </div>
+
+                <div style="display:table-cell;vertical-align:top;padding:0px 3px 3px 3px;font-size:13px;">
+                    <span style="">Знаком "+" устанавливается ударение перед ударной гласной</span>
+
+                </div>
+
+                <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                </div>
+
+            </div>
+
+            <div style="display:table;">
+                <div style="display:table-row;">
+                    <div style="display:table-cell;width:25px;">
+                    </div>
+
+                    <div style="display:table-cell;vertical-align:middle;width:90px;text-align:right;">
+                        <span style="">Файл</span>
+
+                    </div>
+
+                    <div style="display:table-cell;padding:3px;">
+                        <div  Id="tbFileToolTip_PhraseEdit_Module_Phrase" style="display:inline-block;">
+                            <input  id="tbFile_PhraseEdit_Module_Phrase"  class="easyui-textbox" data-options="multiline:false,width:400,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                        </div>
+
+                    </div>
+
+                    <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                        <div  Id="tbFBoxToolTip_PhraseEdit_Module_Phrase" style="display:inline-block;">
+                            <input  id="fBox_PhraseEdit_Module_Phrase"  class="easyui-filebox" data-options="multiline:false,width:30,prompt:'',value:'',type:'text',editable:false,disabled:false,readonly:false,iconAlign:'left',iconWidth:18,buttonText:'',buttonIcon:'icon-file',buttonAlign:'right',multiple:false,separator:','"  type="text"/>
+
+                        </div>
+
+                    </div>
+
+                    <div style="padding:3px;">
+                        <a  id="btnMicrophone_PhraseEdit_Module_Phrase"  href="javascript:void(0);" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconAlign:'left',size:'small'"></a>
+
+                    </div>
+
+                    <div style="display:table-cell;padding:3px;">
+                        <a  id="btnPlay_PhraseEdit_Module_Phrase"  href="javascript:void(0);" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconAlign:'left',size:'small'"></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div style="display:table;padding-top:5px;">
+                <div style="display:table-row;">
+                    <div style="display:table-cell;width:25px;">
+                    </div>
+
+                    <div style="display:table-cell;vertical-align:middle;width:70px;text-align:right;">
+                        <span style="">Создано</span>
+
+                    </div>
+
+                    <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                        <input  id="tbCreate_PhraseEdit_Module_Phrase"  class="easyui-textbox" data-options="multiline:false,width:180,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                    </div>
+
+                    <div style="display:table-cell;vertical-align:middle;width:90px;text-align:right;">
+                        <span style="">Создал</span>
+
+                    </div>
+
+                    <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                        <input  id="tbCreator_PhraseEdit_Module_Phrase"  class="easyui-textbox" data-options="multiline:false,width:250,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                    </div>
+
+                </div>
+
+                <div style="display:table-row;">
+                    <div style="display:table-cell;width:25px;">
+                    </div>
+
+                    <div style="display:table-cell;vertical-align:middle;width:70px;text-align:right;">
+                        <span style="">Изменено</span>
+
+                    </div>
+
+                    <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                        <input  id="tbChange_PhraseEdit_Module_Phrase"  class="easyui-textbox" data-options="multiline:false,width:180,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                    </div>
+
+                    <div style="display:table-cell;vertical-align:middle;width:90px;text-align:right;">
+                        <span style="">Изменил</span>
+
+                    </div>
+
+                    <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                        <input  id="tbChanger_PhraseEdit_Module_Phrase"  class="easyui-textbox" data-options="multiline:false,width:250,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:39px;"><div style="display:table;width:100%;">
+            <div style="display:table-cell;vertical-align:middle;padding: 3px;">
+                <span id="lbRec_PhraseEdit_Module_Phrase"  style="">Запись: осталось 0 сек.</span>
+
+            </div>
+
+            <div  Id="blockLoader_PhraseEdit_Module_Phrase" style="display:table-cell;vertical-align:middle;text-align:left;padding:3px;">
+                <div class="panel-loading" style="display:inline;">
+                </div>
+
+                <div style="display:inline;">
+                    <span style="">Ожидайте... Идет синтез фразы...</span>
+
+                </div>
+
+            </div>
+
+            <div style="display:table-cell;text-align:right;padding:3px;">
+                <a  id="btnOk_PhraseEdit_Module_Phrase"  href="javascript:void(0);" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'OK',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+
+                <a  id="btnCancel_PhraseEdit_Module_Phrase"  href="javascript:void(0);" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Отмена',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+
+            </div>
+
+        </div>
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+<!--audio controls id="myAudio_PhraseEdit_Module_Phrase"></audio-->

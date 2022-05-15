@@ -1,0 +1,32 @@
+.icon-addmode{
+    background:url('img/AddModeIcon.png') no-repeat center center;
+    background-size:cover;
+}
+.icon-editmode{
+    background:url('img/EditModeIcon.png') no-repeat center center;
+    background-size:cover;
+}
+.icon-KOKIconDirectory{
+    background:url('img/KOKIconDirectory.png') no-repeat center center;
+    background-size:cover;
+}
+.icon-KterIconDirectory{
+    background:url('img/KterIconDirectory.png') no-repeat center center;
+    background-size:cover;
+}
+.icon-ExtractDocIcon{
+    background:url('img/ExstractDocIcon.png') no-repeat center center;
+    background-size:cover;
+}
+.icon-LPR{
+    background:url('img/LPR.png') no-repeat center center;
+    background-size:cover;
+}
+.icon-AdmIcon{
+    background:url('img/AdmIcon.png') no-repeat center center;
+    background-size:cover;
+}
+.icon-FilterIcon{
+    background:url('img/FilterIcon.png') no-repeat center center;
+    background-size:cover;
+}

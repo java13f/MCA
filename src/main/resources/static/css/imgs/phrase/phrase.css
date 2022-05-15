@@ -1,0 +1,28 @@
+.icon-play{
+    background:url('play.png') no-repeat center center;
+    background-size:cover;
+}
+.icon-stop{
+    background:url('stop.png') no-repeat center center;
+    background-size:cover;
+}
+.icon-mic{
+    background:url('mic.png') no-repeat center center;
+    background-size:cover;
+}
+.icon-mic-rec{
+    background:url('mic_rec.png') no-repeat center center;
+    background-size:cover;
+}
+.icon-phraseico{
+    background:url('phraseico.png') no-repeat center center;
+    background-size:cover;
+}
+.icon-synteze{
+    background:url('synteze.png') no-repeat center center;
+    background-size:cover;
+}
+.icon-phrasegrp{
+    background:url('phrasegrp.png') no-repeat center center;
+    background-size:cover;
+}

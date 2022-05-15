@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:fragment="jrResultOfNotificationParams" class="easyui-window" id="wJrResultOfNotificationParams_Module_jrResultOfNotification"  data-options="title:'Результат оповещения',width:500,height:309,collapsible:false,minimizable:false,maximizable:false,closable:true,closed:false,zIndex:9000,draggable:true,resizable:true,shadow:true,inline:false,modal:true,border:true,constrain:false,noheader:false,collapsed:false,minimized:false,maximized:false">
+    <div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+        <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:55px;"><div style="display:table;">
+            <div class="icon-large-smartart" style="display:table-cell;width:53px;height:53px;">
+            </div>
+
+            <div style="display:table-cell;vertical-align:middle;font-weight:bold;padding-left:5px;">
+                <span style="">Укажите параметры для формирования отчёта</span>
+
+            </div>
+
+        </div>
+
+        </div>
+        <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div style="margin: auto;">
+            <div style="width:100%;height:20px;">
+            </div>
+
+            <div style="display:table;margin:auto;">
+                <div style="display:table-row;">
+                    <div style="display:table-cell;padding-right:15px;text-align:right;">
+                        <span style="">Дата</span>
+
+                    </div>
+
+                    <div style="display:table-cell;">
+                        <div  Id="ttDate_Module_jrResultOfNotification" style="display:inline-block;align: center;">
+                            <input id="dtDate_Module_jrResultOfNotification"  type="text" class="easyui-datebox" data-options="panelWidth:300,currentText:'Сегодня',closeText:'Закрыть',okText:'Ок',disabled:false"/>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div style="display:table-row;height:15px;">
+                </div>
+
+                <div style="display:table-row;">
+                    <div style="display:table-cell;padding-right:15px;text-align:right;">
+                        <span style="">Оповещение</span>
+
+                    </div>
+
+                    <div style="display:table-cell;">
+                        <div  Id="ttNote_Module_jrResultOfNotification" style="display:inline-block;">
+                            <select id="cbNote_Module_jrResultOfNotification"  class="easyui-combobox" data-options="height:30,width:300,panelHeight:200,selectOnNavigation:true,editable:false,disabled:false,readonly:false,value:'',valueField:'value',textField:'text'">
+                            </select>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div style="display:table-row;height:15px;">
+                </div>
+
+                <div style="display:table-row;">
+                    <div style="display:table-cell;padding-right:15px;text-align:right;">
+                        <span style="">Время</span>
+
+                    </div>
+
+                    <div style="display:table-cell;">
+                        <div  Id="ttTime_Module_jrResultOfNotification" style="display:inline-block;">
+                            <select id="cbTime_Module_jrResultOfNotification"  class="easyui-combobox" data-options="height:30,width:300,panelHeight:200,selectOnNavigation:true,editable:false,disabled:false,readonly:false,value:'',valueField:'value',textField:'text'">
+                            </select>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div style="display:table-row;height:15px;">
+                </div>
+
+            </div>
+
+        </div>
+
+        </div>
+        <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:39px;"><div style="display:table;width:100%;">
+            <div style="display:table-cell;padding:3px;">
+            </div>
+
+            <div style="display:table-cell;width:150px;padding:3px;text-align:right;">
+                <a  id="btnOk_Module_jrResultOfNotification"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'ОК',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+
+                <a  id="btnCancel_Module_jrResultOfNotification"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Отмена',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+
+            </div>
+
+        </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

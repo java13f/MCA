@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>PatternEditForm</title>
+</head>
+<body>
+<div th:fragment="PatternEditForm" class="easyui-window" id="wPatternEdit_PatternEdit_Module_Notes"  data-options="title:'Работа с шаблонами',width:1024,height:618,collapsible:false,minimizable:false,maximizable:false,closable:true,closed:false,zIndex:9000,draggable:true,resizable:false,shadow:true,inline:false,modal:true,border:true,constrain:false,iconCls:'icon-edit',noheader:false,collapsed:false,minimized:false,maximized:false">
+    <div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+        <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:55px;padding:5px;"><div class="icon-pattern" style="display:table-cell;width:43px;height:43px;">
+        </div>
+
+            <div style="display:table-cell;vertical-align:middle;padding:3px;font-weight: bold;">
+                <span id="lbHeader_PatternEdit_Module_Notes"  style="">Работа с шаблонами</span>
+
+            </div>
+
+        </div>
+        <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+            <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+                <div data-options="region:'center',collapsible:false,split:false,border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:150px;"><div style="display:table;vertical-align:middle;height:100%;padding:10px;">
+                    <div style="display:table-row;">
+                        <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                            <div style="display:table;vertical-align:middle;width:100%;height:150px;padding: 0 10px;">
+                                <div style="display:table-row;">
+                                    <div style="display:table-cell;vertical-align:middle;padding:3px;text-align:right;">
+                                        <span style="">Ид</span>
+
+                                    </div>
+
+                                    <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                        <input  id="tbId_PatternEdit_Module_Notes"  class="easyui-textbox" data-options="multiline:false,width:330,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                                    </div>
+
+                                </div>
+
+                                <div style="display:table-row;">
+                                    <div style="display:table-cell;vertical-align:middle;padding:3px;text-align:right;">
+                                        <span style="">Наименование</span>
+
+                                    </div>
+
+                                    <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                        <div  Id="tbNameToolTip_PatternEdit_Module_Notes" style="display:inline-block;">
+                                            <input  id="tbName_PatternEdit_Module_Notes"  class="easyui-textbox" data-options="multiline:false,width:380,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div style="display:table-row;">
+                                    <div style="display:table-cell;vertical-align:middle;padding:3px;text-align:right;">
+                                    </div>
+
+                                    <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                        <input id="chbAllAbon_PatternEdit_Module_Notes" data-options="with:20,height:20,checked:false,disabled:false,label:'Оповестить всех абонентов',labelWidth:300,labelPosition:'after',labelAlign:'left'" class="easyui-checkbox"/>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div style="display:table-row;height:30px;">
+                        <div style="display:table-cell;">
+                            <div style="display:table;border:1px solid lightgray;border-radius: 0px 0px 5px 5px;">
+                                <div style="display:table-caption;vertical-align:middle;border:1px solid lightgray;border-bottom:0;padding:3px;border-radius: 5px 5px 0px 0px;">
+                                    <span style="">Временной диапазон, в рамках которого должны производится попытки установления соединения:</span>
+
+                                </div>
+
+                                <div style="display:table-row;">
+                                    <div style="display:table-cell;vertical-align:middle;height:80px;padding:3px;">
+                                        <div style="display:table;vertical-align:middle;height:50px;padding:0 10px 0 10px;">
+                                            <div style="display:table-row;">
+                                                <div style="display:table-cell;vertical-align:middle;width:50px;padding:3px;text-align:right;">
+                                                    <span style="">Период актуальности</span>
+
+                                                </div>
+
+                                                <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                                    <div  Id="dtStartToolTip_PatternEdit_Module_Notes" style="display:inline-block;">
+                                                        <input id="dtStart_PatternEdit_Module_Notes"  type="text" class="easyui-datebox" data-options="panelWidth:250,currentText:'Сегодня',closeText:'Закрыть',okText:'Ок',disabled:false"/>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div style="display:table-cell;vertical-align:middle;width:35px;text-align:center;">
+                                                    <span style="">–</span>
+
+                                                </div>
+
+                                                <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                                    <div  Id="dtEndToolTip_PatternEdit_Module_Notes" style="display:inline-block;">
+                                                        <input id="dtEnd_PatternEdit_Module_Notes"  type="text" class="easyui-datebox" data-options="panelWidth:250,currentText:'Сегодня',closeText:'Закрыть',okText:'Ок',disabled:false"/>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div style="display:table-row;">
+                                                <div style="display:table-cell;vertical-align:middle;width:50px;padding:3px;text-align:right;">
+                                                    <span style="">Время с</span>
+
+                                                </div>
+
+                                                <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                                    <div  Id="tpStartToolTip_PatternEdit_Module_Notes" style="display:inline-block;">
+                                                        <input  id="tpStart_PatternEdit_Module_Notes" class="easyui-timespinner" data-options="min:'00:00',showSeconds:true">
+                                                    </div>
+
+                                                </div>
+
+                                                <div style="display:table-cell;vertical-align:middle;width:35px;text-align:center;">
+                                                    <span style="">по</span>
+
+                                                </div>
+
+                                                <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                                    <div  Id="tpEndToolTip_PatternEdit_Module_Notes" style="display:inline-block;">
+                                                        <input  id="tpEnd_PatternEdit_Module_Notes" class="easyui-timespinner" data-options="min:'00:00',showSeconds:true">
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div style="display:table-row;">
+                                    <div style="display:table-cell;vertical-align:middle;height:60px;padding:3px;">
+                                        <div style="display:table;vertical-align:bottom;height:50px;">
+                                            <div style="display:table-row;">
+                                                <div style="display:table-cell;vertical-align:middle;width:85px;padding:3px 8px 0px 3px;text-align:right;">
+                                                    <span style="">Дни</span>
+
+                                                </div>
+
+                                                <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                                    <input id="chbDay1_PatternEdit_Module_Notes" data-options="with:28,height:20,checked:false,disabled:false,label:'Понедельник',labelWidth:90,labelPosition:'after',labelAlign:'left'" class="easyui-checkbox"/>
+
+                                                </div>
+
+                                                <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                                    <input id="chbDay2_PatternEdit_Module_Notes" data-options="with:20,height:20,checked:false,disabled:false,label:'Вторник',labelWidth:65,labelPosition:'after',labelAlign:'left'" class="easyui-checkbox"/>
+
+                                                </div>
+
+                                                <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                                    <input id="chbDay3_PatternEdit_Module_Notes" data-options="with:28,height:20,checked:false,disabled:false,label:'Среда',labelWidth:90,labelPosition:'after',labelAlign:'left'" class="easyui-checkbox"/>
+
+                                                </div>
+
+                                                <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                                    <input id="chbDay4_PatternEdit_Module_Notes" data-options="with:28,height:20,checked:false,disabled:false,label:'Четверг',labelWidth:60,labelPosition:'after',labelAlign:'left'" class="easyui-checkbox"/>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div style="display:table-row;">
+                                                <div style="display:table-cell;vertical-align:top;padding:0px 3px 3px 3px;text-align:right;">
+                                                    <span style="">недели</span>
+
+                                                </div>
+
+                                                <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                                    <input id="chbDay5_PatternEdit_Module_Notes" data-options="with:28,height:20,checked:false,disabled:false,label:'Пятница',labelWidth:90,labelPosition:'after',labelAlign:'left'" class="easyui-checkbox"/>
+
+                                                </div>
+
+                                                <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                                    <input id="chbDay6_PatternEdit_Module_Notes" data-options="with:20,height:20,checked:false,disabled:false,label:'Суббота',labelWidth:65,labelPosition:'after',labelAlign:'left'" class="easyui-checkbox"/>
+
+                                                </div>
+
+                                                <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                                    <input id="chbDay7_PatternEdit_Module_Notes" data-options="with:28,height:20,checked:false,disabled:false,label:'Воскресенье',labelWidth:90,labelPosition:'after',labelAlign:'left'" class="easyui-checkbox"/>
+
+                                                </div>
+
+                                                <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                </div>
+                <div data-options="region:'south',collapsible:false,split:false,border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:95px;padding:10px;"><div style="display:table-row;">
+                    <div style="display:table-cell;vertical-align:middle;padding:3px;text-align:right;">
+                        <span style="">Создано</span>
+
+                    </div>
+
+                    <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                        <input  id="tbCreated_PatternEdit_Module_Notes"  class="easyui-textbox" data-options="multiline:false,width:150,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                    </div>
+
+                    <div style="display:table-cell;width:10px;">
+                    </div>
+
+                    <div style="display:table-cell;vertical-align:middle;padding:3px;text-align:right;">
+                        <span style="">Создал</span>
+
+                    </div>
+
+                    <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                        <input  id="tbCreator_PatternEdit_Module_Notes"  class="easyui-textbox" data-options="multiline:false,width:220,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                    </div>
+
+                </div>
+
+                    <div style="display:table-row;padding:5px;">
+                        <div style="display:table-cell;vertical-align:middle;padding:3px;text-align:right;">
+                            <span style="">Изменено</span>
+
+                        </div>
+
+                        <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                            <input  id="tbChanged_PatternEdit_Module_Notes"  class="easyui-textbox" data-options="multiline:false,width:150,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                        </div>
+
+                        <div style="display:table-cell;width:10px;">
+                        </div>
+
+                        <div style="display:table-cell;vertical-align:middle;padding:3px;text-align:right;">
+                            <span style="">Изменил</span>
+
+                        </div>
+
+                        <div style="display:table-cell;vertical-align:middle;padding:3px;">
+                            <input  id="tbChanger_PatternEdit_Module_Notes"  class="easyui-textbox" data-options="multiline:false,width:220,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            </div>
+            <div data-options="region:'east',collapsible:false,split:false,border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:480px;height:100%;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+                <div data-options="region:'north',collapsible:false,split:false,title:'Группы для оповещения',border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:50%;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+                    <div data-options="region:'center',collapsible:false,split:false,border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><table  id="dgGrps_PatternEdit_Module_Notes" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'post',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:false,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%"><thead >
+                    <tr><th data-options="title:'Ид',field:'id',width:120,sortable:true,resizable:true,fixed:true"></th>
+                        <th data-options="title:'Группа',field:'name',width:10000,sortable:true,resizable:true,fixed:false"></th>
+                        <th data-options="title:'',field:'itemId',hidden:true"></th>
+                        <th data-options="title:'',field:'del',hidden:true"></th>
+                    </tr></thead>
+                    </table>
+
+                    </div>
+                    <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:39px;"><div style="display:table-cell;padding:3px;">
+                        <a  id="btnAddGrp_PatternEdit_Module_Notes"  href="javascript:void(0);" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Добавить',iconCls:'icon-add',iconAlign:'left',size:'small'"></a>
+
+                        <a  id="btnDelGrp_PatternEdit_Module_Notes"  href="javascript:void(0);" class="easyui-linkbutton" data-options="disabled:false,width:85,toggle:false,selected:false,plain:false,text:'Удалить',iconCls:'icon-remove',iconAlign:'left',size:'small'"></a>
+
+                        <input id="chbDelGrp_PatternEdit_Module_Notes" data-options="with:20,height:20,checked:false,disabled:false,label:'Удаленные',labelPosition:'after',labelAlign:'left'" class="easyui-checkbox"/>
+
+                    </div>
+
+                    </div>
+                </div>
+
+                </div>
+                <div data-options="region:'center',collapsible:false,split:false,title:'Абоненты для оповещения',border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+                    <div data-options="region:'center',collapsible:false,split:false,border:false,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><table  id="dgAbons_PatternEdit_Module_Notes" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'post',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:false,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%"><thead >
+                    <tr><th data-options="title:'Ид',field:'id',width:120,sortable:true,resizable:true,fixed:true"></th>
+                        <th data-options="title:'Абонент',field:'name',width:10000,sortable:true,resizable:true,fixed:false"></th>
+                        <th data-options="title:'',field:'itemId',hidden:true"></th>
+                        <th data-options="title:'',field:'del',hidden:true"></th>
+                    </tr></thead>
+                    </table>
+
+                    </div>
+                    <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:39px;"><div style="display:table-cell;padding:3px;">
+                        <a  id="btnAddAbon_PatternEdit_Module_Notes"  href="javascript:void(0);" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Добавить',iconCls:'icon-add',iconAlign:'left',size:'small'"></a>
+
+                        <a  id="btnDelAbon_PatternEdit_Module_Notes"  href="javascript:void(0);" class="easyui-linkbutton" data-options="disabled:false,width:85,toggle:false,selected:false,plain:false,text:'Удалить',iconCls:'icon-remove',iconAlign:'left',size:'small'"></a>
+
+                        <input id="chbDelAbon_PatternEdit_Module_Notes" data-options="with:20,height:20,checked:false,disabled:false,label:'Удаленные',labelPosition:'after',labelAlign:'left'" class="easyui-checkbox"/>
+
+                    </div>
+
+                    </div>
+                </div>
+
+                </div>
+            </div>
+
+            </div>
+        </div>
+
+        </div>
+        <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:39px;"><div style="display:table;width:100%;">
+            <div style="display:table-cell;text-align:right;padding:3px;">
+                <a  id="btnOk_PatternEdit_Module_Notes"  href="javascript:void(0);" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'OK',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+
+                <a  id="btnCancel_PatternEdit_Module_Notes"  href="javascript:void(0);" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Отмена',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+
+            </div>
+
+        </div>
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+
+<!--input id="ss" class="easyui-timespinner" data-options="min:'00:00',showSeconds:true"-->
